@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ============================================================
+     PASSE PREMIUM — página interna da área de membros
+     Contexto: a pessoa JÁ pagou os R$ 19,90 e tem vaga na imersão.
+     Ela pode ler isto ANTES do evento (cenário principal),
+     durante, ou depois. A copy funciona nos três momentos.
+     ============================================================ -->
+<title>Passe Premium | Multiverso dos Criativos</title>
+<meta name="description" content="Sua vaga está garantida. O Passe Premium adiciona as gravações, os materiais, os prompts e o checklist para a imersão não acabar no domingo à noite.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Passe Premium | Multiverso dos Criativos">
+<meta property="og:description" content="Viva os dois dias ao vivo. E leve tudo com você.">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   TOKENS — mesma identidade da LP1
+   ============================================================ */
+:root{
+  --preto:#04030A; --preto-2:#0A0816; --preto-3:#110D22;
+  --linha:rgba(255,255,255,.08);
+  --dourado:#F2C14E; --dourado-2:#FFE29A; --dourado-3:#B8862B;
+  --roxo:#A855F7; --roxo-2:#6D28D9; --azul:#22D3FF; --rosa:#FF2ED1;
+  --verde:#00E27A; --verde-2:#00B863;
+  --txt:#F4F2FF; --txt-2:#B7B2CC; --txt-3:#7C7793;
+  --r-sm:12px; --r:18px; --r-lg:28px; --max:1080px;
+  --f-display:'Sora',system-ui,-apple-system,sans-serif;
+  --f-body:'Inter',system-ui,-apple-system,sans-serif;
+  --sombra-cta:0 10px 40px rgba(0,226,122,.35);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--preto);color:var(--txt);font-family:var(--f-body);
+  font-size:17px;line-height:1.6;overflow-x:hidden;padding-bottom:84px;
+  -webkit-font-smoothing:antialiased;
+}
+@media(min-width:900px){ body{padding-bottom:0} }
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:20px;position:relative;z-index:2}
+.sec{padding:70px 0;position:relative}
+@media(min-width:900px){ .sec{padding:104px 0} }
+.eyebrow{font-family:var(--f-display);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--dourado);margin-bottom:16px}
+h1,h2,h3{font-family:var(--f-display);line-height:1.08;letter-spacing:-.02em;font-weight:800}
+h1{font-size:clamp(30px,7vw,58px)}
+h2{font-size:clamp(26px,5.2vw,44px);margin-bottom:18px}
+h3{font-size:clamp(19px,3vw,23px);font-weight:700;line-height:1.25}
+.lead{font-size:clamp(16px,2.4vw,20px);color:var(--txt-2);max-width:60ch}
+.center{text-align:center}.center .lead{margin-inline:auto}
+.mt-s{margin-top:14px}.mt{margin-top:28px}.mt-l{margin-top:48px}
+.grad-ouro{background:linear-gradient(100deg,var(--dourado-2),var(--dourado) 40%,var(--dourado-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad-neon{background:linear-gradient(100deg,var(--azul),var(--roxo) 55%,var(--rosa));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;pointer-events:none;z-index:0}
+.glow-roxo{background:radial-gradient(circle,rgba(168,85,247,.55),transparent 70%)}
+.glow-ouro{background:radial-gradient(circle,rgba(242,193,78,.38),transparent 70%)}
+.glow-azul{background:radial-gradient(circle,rgba(34,211,255,.4),transparent 70%)}
+
+/* CTA */
+.cta{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;max-width:480px;margin-inline:auto;padding:20px 26px;
+  background:linear-gradient(180deg,var(--verde),var(--verde-2));color:#031B0E;
+  font-family:var(--f-display);font-size:clamp(16px,3.4vw,19px);font-weight:800;
+  border:none;border-radius:999px;cursor:pointer;box-shadow:var(--sombra-cta);
+  animation:pulsa 2.6s ease-in-out infinite;transition:transform .18s,box-shadow .18s;text-align:center;
+}
+.cta:hover{transform:translateY(-2px) scale(1.015);box-shadow:0 14px 52px rgba(0,226,122,.5)}
+@keyframes pulsa{0%,100%{box-shadow:0 10px 40px rgba(0,226,122,.32),0 0 0 0 rgba(0,226,122,.42)}50%{box-shadow:0 10px 44px rgba(0,226,122,.42),0 0 0 16px rgba(0,226,122,0)}}
+@media(prefers-reduced-motion:reduce){ .cta{animation:none} }
+.cta-nota{font-size:13.5px;color:var(--txt-3);text-align:center;margin-top:14px;line-height:1.5}
+.cta-bloco{margin-top:34px}
+
+.topbar{background:linear-gradient(90deg,var(--roxo-2),var(--roxo) 50%,var(--rosa));text-align:center;padding:9px 16px;font-size:13px;font-weight:600;position:relative;z-index:60}
+
+/* HERO */
+.hero{position:relative;padding:46px 0 60px;overflow:hidden;text-align:center}
+@media(min-width:900px){ .hero{padding:70px 0 90px} }
+.hero::after{
+  content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background-image:linear-gradient(rgba(168,85,247,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(168,85,247,.07) 1px,transparent 1px);
+  background-size:56px 56px;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 20%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 30%,#000 20%,transparent 75%);
+}
+/* logo do evento */
+.logo-topo{margin:0 auto 26px;max-width:190px}
+.logo-topo img{width:100%}
+/* fallback tipográfico enquanto não houver arquivo de logo */
+.logo-txt{
+  font-family:var(--f-display);text-align:center;line-height:1.05;
+  margin:0 auto 26px;max-width:280px;
+}
+.logo-txt i{display:block;font-style:normal;font-size:10px;font-weight:700;letter-spacing:.42em;text-transform:uppercase;color:var(--txt-3);margin-bottom:6px}
+.logo-txt b{display:block;font-size:22px;font-weight:800;letter-spacing:-.01em}
+
+.badge-vaga{
+  display:inline-flex;align-items:center;gap:9px;margin-bottom:22px;
+  padding:9px 18px;border-radius:999px;
+  border:1px solid rgba(0,226,122,.4);background:rgba(0,226,122,.09);
+  font-family:var(--f-display);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--verde);
+}
+.badge-vaga::before{content:'✓';font-size:13px}
+.hero h1{margin-bottom:20px}
+.hero .lead{margin-inline:auto;margin-bottom:30px}
+
+/* faixa de datas */
+.data-strip{
+  display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 18px;
+  margin:0 auto 30px;padding:14px 26px;border-radius:var(--r);
+  border:1px solid rgba(242,193,78,.3);background:rgba(242,193,78,.06);
+}
+.data-item{display:flex;align-items:center;gap:8px;font-size:14.5px;color:var(--txt-2);font-weight:500}
+.data-item b{font-family:var(--f-display);color:var(--dourado-2);font-weight:700}
+.data-sep{width:1px;height:22px;background:rgba(255,255,255,.14)}
+@media(max-width:560px){ .data-sep{display:none} .data-strip{flex-direction:column;gap:9px;padding:16px 22px;width:100%} }
+
+/* arte do evento */
+.arte{
+  max-width:440px;margin:0 auto 30px;border-radius:var(--r-lg);overflow:hidden;
+  border:1px solid rgba(255,255,255,.1);box-shadow:0 0 60px rgba(168,85,247,.28);
+  background:
+    radial-gradient(circle at 30% 30%,rgba(242,193,78,.28),transparent 55%),
+    radial-gradient(circle at 72% 42%,rgba(255,46,209,.28),transparent 55%),
+    radial-gradient(circle at 50% 85%,rgba(34,211,255,.2),transparent 60%),
+    var(--preto-2);
+}
+.arte img{width:100%}
+.arte-ph{aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;gap:10px}
+.arte-ph b{font-family:var(--f-display);font-size:14px;color:rgba(255,255,255,.85);letter-spacing:.04em}
+.arte-ph small{font-size:12px;color:rgba(255,255,255,.55)}
+
+/* card de preço */
+.preco-card{
+  max-width:520px;margin:0 auto;
+  border:1px solid rgba(242,193,78,.3);border-radius:var(--r-lg);
+  background:linear-gradient(180deg,rgba(242,193,78,.09),rgba(4,3,10,.5));
+  padding:28px 24px;
+}
+.preco-label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt-3);font-weight:700}
+.preco{font-family:var(--f-display);font-size:clamp(42px,10vw,58px);font-weight:800;line-height:1;margin:8px 0 4px}
+.preco small{font-size:.4em;font-weight:600;vertical-align:.5em;margin-right:2px}
+.preco-nota{font-size:14.5px;color:var(--txt-2)}
+.parcela{font-size:15px;color:var(--dourado-2);font-weight:600;margin-top:6px}
+
+.count{display:flex;gap:8px;margin:22px 0 6px;max-width:400px;margin-inline:auto}
+.count-item{flex:1;text-align:center;padding:12px 4px;background:var(--preto-3);border:1px solid var(--linha);border-radius:var(--r-sm)}
+.count-n{font-family:var(--f-display);font-size:clamp(21px,5vw,28px);font-weight:800;line-height:1;color:var(--dourado-2)}
+.count-l{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-3);margin-top:5px;font-weight:600}
+.count-titulo{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt-3);font-weight:700;text-align:center}
+
+/* CARDS */
+.grid{display:grid;gap:16px}
+@media(min-width:760px){ .grid.g3{grid-template-columns:repeat(3,1fr)} }
+.cenario{
+  background:linear-gradient(180deg,var(--preto-2),rgba(10,8,22,.4));
+  border:1px solid var(--linha);border-radius:var(--r);padding:30px 24px;transition:.25s;
+  display:flex;flex-direction:column;text-align:center;   /* conteúdo centralizado */
+}
+.cenario:hover{border-color:rgba(168,85,247,.4);transform:translateY(-3px)}
+.cenario-ico{
+  width:54px;height:54px;border-radius:15px;display:flex;align-items:center;justify-content:center;
+  font-size:24px;margin:0 auto 18px;                       /* ícone centralizado */
+  background:linear-gradient(140deg,rgba(168,85,247,.28),rgba(34,211,255,.18));
+  border:1px solid rgba(168,85,247,.35);
+}
+.cenario h3{margin-bottom:10px;font-size:19px}
+.cenario p{color:var(--txt-2);font-size:15.5px;flex:1}     /* alinha as linhas verdes na base */
+.cenario-fix{
+  display:block;margin-top:18px;padding-top:15px;border-top:1px solid var(--linha);
+  font-size:14px;color:var(--verde);font-weight:600;
+}
+
+/* CURVA DO ESQUECIMENTO */
+.curva{
+  border-radius:var(--r-lg);padding:32px 24px;
+  background:linear-gradient(180deg,rgba(255,60,60,.06),transparent);
+  border:1px solid rgba(255,80,80,.2);
+}
+@media(min-width:820px){ .curva{padding:40px} }
+.curva-barras{display:flex;align-items:flex-end;gap:10px;height:170px;margin:28px 0 14px}
+.cb{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;text-align:center}
+.cb i{display:block;border-radius:8px 8px 3px 3px;background:linear-gradient(180deg,var(--rosa),var(--roxo-2));font-style:normal;transition:height .8s cubic-bezier(.2,.8,.2,1)}
+.cb b{font-family:var(--f-display);font-size:15px;font-weight:800;color:var(--txt);margin-bottom:7px}
+.cb small{font-size:11.5px;color:var(--txt-3);margin-top:9px;letter-spacing:.04em}
+.curva-nota{font-size:14.5px;color:var(--txt-3);text-align:center}
+
+/* INCLUSOS */
+.inclusos{display:grid;gap:14px}
+@media(min-width:760px){ .inclusos{grid-template-columns:1fr 1fr} }
+.incluso{
+  display:flex;gap:16px;padding:22px 20px;border-radius:var(--r);
+  background:var(--preto-2);border:1px solid var(--linha);transition:.25s;
+}
+.incluso:hover{border-color:rgba(242,193,78,.35)}
+.incluso-ico{
+  width:44px;height:44px;flex-shrink:0;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;font-size:20px;
+  background:linear-gradient(140deg,rgba(242,193,78,.24),rgba(255,46,209,.14));
+  border:1px solid rgba(242,193,78,.3);
+}
+.incluso b{font-family:var(--f-display);font-size:16.5px;font-weight:700;display:block;margin-bottom:5px}
+.incluso p{font-size:14.5px;color:var(--txt-2);line-height:1.5}
+.incluso-valor{font-family:var(--f-display);font-size:13px;font-weight:700;color:var(--dourado-2);margin-top:8px;display:block}
+
+/* USOS */
+.usos{list-style:none;display:grid;gap:12px}
+@media(min-width:760px){ .usos{grid-template-columns:1fr 1fr} }
+.usos li{
+  display:flex;gap:12px;align-items:flex-start;padding:16px 18px;
+  background:var(--preto-2);border:1px solid var(--linha);border-radius:var(--r-sm);
+  font-size:15.5px;color:var(--txt-2);line-height:1.45;
+}
+.usos li::before{content:'✓';color:var(--verde);font-weight:700;flex-shrink:0}
+.usos li b{color:var(--txt)}
+
+/* COMO FUNCIONA O ACESSO */
+.acesso{
+  border-radius:var(--r-lg);padding:30px 24px;
+  background:linear-gradient(180deg,rgba(34,211,255,.05),transparent);
+  border:1px solid rgba(34,211,255,.18);
+}
+@media(min-width:820px){ .acesso{padding:38px} }
+.acesso-linhas{list-style:none;display:grid;gap:16px;margin-top:22px}
+@media(min-width:760px){ .acesso-linhas{grid-template-columns:1fr 1fr} }
+.acesso-linhas li{display:flex;gap:13px;align-items:flex-start;font-size:15.5px;color:var(--txt-2);line-height:1.5}
+.acesso-linhas li i{font-style:normal;flex-shrink:0;font-size:17px}
+.acesso-linhas b{color:var(--txt)}
+
+/* OFERTA */
+.oferta{
+  border-radius:var(--r-lg);padding:34px 24px;max-width:640px;margin-inline:auto;
+  background:linear-gradient(180deg,rgba(168,85,247,.14),rgba(4,3,10,.6));
+  border:1px solid rgba(242,193,78,.32);box-shadow:0 0 90px rgba(168,85,247,.18);
+}
+@media(min-width:760px){ .oferta{padding:44px 40px} }
+.stack{list-style:none;margin:24px 0}
+.stack li{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:14px 0;border-bottom:1px dashed rgba(255,255,255,.11);font-size:15.5px}
+.stack li span{color:var(--txt-2);flex:1}
+.stack li b{color:var(--dourado-2);white-space:nowrap;font-family:var(--f-display);font-size:14.5px}
+.stack-total{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:18px;font-family:var(--f-display);font-weight:700;font-size:16px}
+.stack-total b{color:var(--txt-3);text-decoration:line-through;font-size:18px}
+.preco-final{text-align:center;margin:26px 0 4px}
+.preco-final .preco{background:linear-gradient(100deg,var(--dourado-2),var(--dourado) 45%,var(--dourado-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.oferta-fine{
+  margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.09);
+  font-size:13px;color:var(--txt-3);line-height:1.6;text-align:center;
+}
+
+/* GARANTIA */
+.garantia{display:grid;gap:24px;align-items:center;border-radius:var(--r-lg);padding:32px 24px;background:linear-gradient(180deg,rgba(0,226,122,.07),transparent);border:1px solid rgba(0,226,122,.24)}
+@media(min-width:800px){ .garantia{grid-template-columns:150px 1fr;padding:40px} }
+.selo{width:130px;height:130px;border-radius:50%;margin-inline:auto;flex-shrink:0;border:2px solid rgba(0,226,122,.4);background:radial-gradient(circle,rgba(0,226,122,.18),transparent 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-family:var(--f-display)}
+.selo b{font-size:34px;font-weight:800;line-height:1;color:var(--verde)}
+.selo small{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt-2);margin-top:5px;font-weight:700}
+
+/* FAQ */
+.faq{max-width:760px;margin-inline:auto;display:flex;flex-direction:column;gap:10px}
+details{background:var(--preto-2);border:1px solid var(--linha);border-radius:var(--r-sm);overflow:hidden;transition:border-color .2s}
+details[open]{border-color:rgba(168,85,247,.38)}
+summary{cursor:pointer;list-style:none;padding:19px 52px 19px 20px;position:relative;font-family:var(--f-display);font-weight:700;font-size:16px;line-height:1.4}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:400;color:var(--dourado);transition:transform .25s}
+details[open] summary::after{content:'−'}
+details p{padding:0 20px 20px;color:var(--txt-2);font-size:15.5px}
+details p + p{padding-top:0;margin-top:-8px}
+
+/* FINAL */
+.final{position:relative;text-align:center;overflow:hidden;padding:80px 0;background:linear-gradient(180deg,transparent,rgba(168,85,247,.1) 50%,transparent)}
+.final h2{max-width:20ch;margin-inline:auto}
+
+/* STICKY */
+.sticky{
+  position:fixed;bottom:0;left:0;right:0;z-index:80;
+  padding:11px 14px calc(11px + env(safe-area-inset-bottom));
+  background:rgba(4,3,10,.9);backdrop-filter:blur(16px);
+  border-top:1px solid rgba(242,193,78,.22);display:flex;align-items:center;gap:12px;
+  transform:translateY(110%);transition:transform .32s cubic-bezier(.4,0,.2,1);
+}
+.sticky.on{transform:translateY(0)}
+.sticky-preco{flex-shrink:0;line-height:1.15}
+.sticky-preco b{display:block;font-family:var(--f-display);font-size:18px;font-weight:800;color:var(--dourado-2)}
+.sticky-preco small{font-size:10.5px;color:var(--txt-3)}
+.sticky .cta{margin:0;padding:15px 16px;font-size:14px;max-width:none}
+@media(min-width:900px){ .sticky{display:none} }
+
+footer{padding:46px 0 34px;border-top:1px solid var(--linha);text-align:center;font-size:13px;color:var(--txt-3);line-height:1.7}
+footer a{color:var(--txt-2);text-decoration:underline;text-underline-offset:3px}
+.footer-logo{font-family:var(--f-display);font-size:15px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--txt-2);margin-bottom:14px}
+.footer-regras{margin-top:18px;font-size:12.5px;max-width:64ch;margin-inline:auto;color:#6C6883;line-height:1.65}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){ .rv{opacity:1;transform:none} }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ BARRA ══════════════ -->
+<div class="topbar">🔒 Oferta exclusiva para quem já garantiu a vaga na imersão</div>
+
+<!-- ══════════════ 1. HERO ══════════════ -->
+<header class="hero">
+  <div class="glow glow-roxo" style="width:640px;height:560px;top:-160px;left:50%;transform:translateX(-50%)"></div>
+  <div class="glow glow-ouro" style="width:460px;height:460px;top:120px;right:-160px"></div>
+
+  <div class="wrap">
+
+    <!-- ▼ LOGO DO EVENTO
+         Quando tiver o arquivo, troque este bloco por:
+         <div class="logo-topo"><img src="assets/logo.png" alt="Multiverso dos Criativos"></div>
+         Formato ideal: PNG com fundo transparente, 600px de largura. -->
+    <div class="logo-txt">
+      <i>Imersão</i>
+      <b class="grad-ouro">Multiverso<br>dos Criativos</b>
+    </div>
+
+    <div class="badge-vaga">Sua vaga está confirmada</div>
+
+    <h1>
+      Viva os dois dias ao vivo.<br>
+      E <span class="grad-ouro">leve tudo com você</span>.
+    </h1>
+
+    <!-- ▼ DATAS DO EVENTO -->
+    <div class="data-strip">
+      <span class="data-item">📅 <b>19 e 20 de setembro</b></span>
+      <span class="data-sep"></span>
+      <span class="data-item">Sábado e domingo</span>
+      <span class="data-sep"></span>
+      <span class="data-item">🕗 <b>19h às 22h</b> (Brasília)</span>
+    </div>
+
+    <p class="lead">
+      Sua inscrição está garantida e nos vemos no sábado.
+      O <b style="color:var(--txt)">Passe Premium</b> adiciona as gravações completas, os materiais,
+      os prompts e o checklist de execução. Assim a imersão não termina no domingo à noite:
+      ela vira o material que você abre toda vez que sentar para produzir.
+    </p>
+
+    <!-- ▼ ARTE DO EVENTO
+         Troque por: <img src="assets/arte-evento.jpg" alt="Imersão Multiverso dos Criativos">
+         Use a arte quadrada 1080x1080 que você já tem. -->
+    <div class="arte">
+      <img src="assets/arte-evento.jpg"
+           alt="Imersão Multiverso dos Criativos: Canva e edição de vídeo com IA"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="arte-ph" style="display:none">
+        <b>ARTE DO EVENTO</b>
+        <small>1080 × 1080px<br>(a arte quadrada que você já tem)</small>
+      </div>
+    </div>
+
+    <div class="preco-card">
+      <div class="preco-label">Passe Premium</div>
+      <div class="preco grad-ouro"><small>R$</small>137,90</div>
+      <div class="parcela">ou 12x de R$ 13,79 no cartão</div>
+      <div class="preco-nota mt-s">Pagamento único · Gravações liberadas por 3 meses</div>
+
+      <p class="count-titulo mt" id="count-titulo">Falta para a imersão começar</p>
+      <div class="count" id="count">
+        <div class="count-item"><div class="count-n" data-d>00</div><div class="count-l">Dias</div></div>
+        <div class="count-item"><div class="count-n" data-h>00</div><div class="count-l">Horas</div></div>
+        <div class="count-item"><div class="count-n" data-m>00</div><div class="count-l">Min</div></div>
+        <div class="count-item"><div class="count-n" data-s>00</div><div class="count-l">Seg</div></div>
+      </div>
+
+      <div class="cta-bloco">
+        <a class="cta" href="https://CHECKOUT.com.br/passe-premium" data-cta>🚀 Adicionar o Passe Premium</a>
+        <p class="cta-nota">Garantia de 7 dias · Pix, cartão ou boleto</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════ 2. TRÊS CENÁRIOS (a dor real, no futuro) ══════════════ -->
+<section class="sec">
+  <div class="glow glow-azul" style="width:460px;height:460px;top:5%;left:-200px"></div>
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">Pense em como vai ser o fim de semana</div>
+      <h2>Três coisas acontecem<br>com <span class="grad-neon">quase todo mundo</span> ao vivo.</h2>
+      <p class="lead">Não é falha sua. É como funciona uma aula prática de seis horas.</p>
+    </div>
+
+    <div class="grid g3 mt-l rv">
+      <div class="cenario">
+        <div class="cenario-ico">⏱️</div>
+        <h3>Algo vai atravessar</h3>
+        <p>Uma visita, um imprevisto, a internet caindo, um compromisso que apareceu. Fim de semana é assim.</p>
+        <span class="cenario-fix">Com o Passe, você assiste depois. Inteiro.</span>
+      </div>
+
+      <div class="cenario">
+        <div class="cenario-ico">✋</div>
+        <h3>Você vai ficar entre executar e assistir</h3>
+        <p>Enquanto tenta reproduzir o que estou fazendo na tela, a aula continua. Ou você acompanha, ou você pratica.</p>
+        <span class="cenario-fix">Com o Passe, você faz as duas coisas no seu tempo.</span>
+      </div>
+
+      <div class="cenario">
+        <div class="cenario-ico">⚡</div>
+        <h3>Detalhes vão passar rápido</h3>
+        <p>Um atalho, um ajuste de configuração, um prompt que apareceu por três segundos na tela.</p>
+        <span class="cenario-fix">Com o Passe, é só voltar o vídeo.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 3. CURVA DO ESQUECIMENTO ══════════════ -->
+<section class="sec" style="background:linear-gradient(180deg,transparent,rgba(10,8,22,.7),transparent)">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">E depois que acabar</div>
+      <h2>Ao vivo você entende.<br><span class="grad-neon">Revendo, você domina.</span></h2>
+      <p class="lead">
+        Duas semanas depois de uma aula, ninguém lembra do passo a passo. Não é falta de atenção.
+        É assim que a memória funciona. E é exatamente aí que a maioria das pessoas volta ao jeito antigo de trabalhar.
+      </p>
+    </div>
+
+    <div class="curva mt-l rv">
+      <div class="curva-barras" id="barras">
+        <div class="cb"><b>100%</b><i data-h="100%"></i><small>No dia</small></div>
+        <div class="cb"><b>~58%</b><i data-h="58%"></i><small>Em 1 dia</small></div>
+        <div class="cb"><b>~44%</b><i data-h="44%"></i><small>Em 1 semana</small></div>
+        <div class="cb"><b>~25%</b><i data-h="25%"></i><small>Em 1 mês</small></div>
+      </div>
+      <p class="curva-nota">Curva do esquecimento (Ebbinghaus): quanto de um conteúdo novo permanece sem revisão.</p>
+    </div>
+
+    <p class="lead center mt-l rv">
+      Poder rever é o que separa <b style="color:var(--txt)">“achei incrível”</b>
+      de <b style="color:var(--dourado-2)">“mudou meu jeito de trabalhar”</b>.
+    </p>
+
+    <div class="cta-bloco rv">
+      <a class="cta" href="https://CHECKOUT.com.br/passe-premium" data-cta>🔥 Quero o Passe Premium</a>
+      <p class="cta-nota">R$ 137,90 ou 12x de R$ 13,79</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 4. O QUE ESTÁ INCLUSO ══════════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">O que vem no passe</div>
+      <h2>Não é só a gravação.<br>É a <span class="grad-ouro">imersão inteira</span> na sua mão.</h2>
+    </div>
+
+    <div class="inclusos mt-l rv">
+      <div class="incluso">
+        <div class="incluso-ico">🎥</div>
+        <div>
+          <b>Gravação completa do Dia 1</b>
+          <p>Canva com IA, do início ao fim, sem cortes, incluindo as dúvidas respondidas ao vivo.</p>
+          <span class="incluso-valor">Valor avulso: R$ 297</span>
+        </div>
+      </div>
+
+      <div class="incluso">
+        <div class="incluso-ico">🎬</div>
+        <div>
+          <b>Gravação completa do Dia 2</b>
+          <p>Edição de Vídeo com IA, na íntegra. Pause, volte e repita cada passo no seu ritmo.</p>
+          <span class="incluso-valor">Valor avulso: R$ 297</span>
+        </div>
+      </div>
+
+      <div class="incluso">
+        <div class="incluso-ico">📦</div>
+        <div>
+          <b>Todos os materiais da imersão</b>
+          <p>Arquivos, links, templates e recursos usados nas aulas, organizados em um só lugar.</p>
+          <span class="incluso-valor">Valor avulso: R$ 97</span>
+        </div>
+      </div>
+
+      <div class="incluso">
+        <div class="incluso-ico">🧠</div>
+        <div>
+          <b>Biblioteca de prompts exclusivos</b>
+          <p>Os comandos exatos que geram resultado bom já na primeira tentativa. É copiar, adaptar e usar.</p>
+          <span class="incluso-valor">Valor avulso: R$ 147</span>
+        </div>
+      </div>
+
+      <div class="incluso" style="grid-column:1/-1">
+        <div class="incluso-ico">✅</div>
+        <div>
+          <b>Checklist de execução</b>
+          <p>O passo a passo dos dois dias resumido em uma página. Abre, segue, entrega. Vira seu roteiro de produção semanal para quando não der tempo de rever a aula inteira.</p>
+          <span class="incluso-valor">Valor avulso: R$ 67</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 5. COMO VOCÊ VAI USAR ══════════════ -->
+<section class="sec" style="background:linear-gradient(180deg,transparent,rgba(10,8,22,.7),transparent)">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">No dia a dia</div>
+      <h2>O que muda quando você tem tudo salvo</h2>
+    </div>
+
+    <ul class="usos mt-l rv">
+      <li><span><b>Assiste ao vivo sem correria.</b> Sabendo que está gravado, você presta atenção em vez de anotar desesperadamente.</span></li>
+      <li><span><b>Revê só o trecho que precisa.</b> Travou num recurso do Canva? Abre, vê 4 minutos, resolve.</span></li>
+      <li><span><b>Aplica no seu ritmo.</b> Sem ficar para trás na tela enquanto tenta acompanhar.</span></li>
+      <li><span><b>Não perde nenhum detalhe.</b> Aquele atalho que passou rápido continua lá.</span></li>
+      <li><span><b>Atualiza seu processo.</b> Volta ao material sempre que quiser refinar o fluxo de produção.</span></li>
+      <li><span><b>Cria sua biblioteca pessoal.</b> Prompts, templates e materiais reunidos num só lugar.</span></li>
+      <li><span><b>Estuda quando dá.</b> Madrugada, almoço, fim de semana. Celular ou computador.</span></li>
+      <li><span><b>Recupera o investimento na primeira entrega.</b> Um único trabalho de cliente já paga o passe.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════ 6. OFERTA ══════════════ -->
+<section class="sec" id="oferta">
+  <div class="glow glow-ouro" style="width:560px;height:560px;top:5%;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">A conta</div>
+      <h2>Some tudo o que você leva</h2>
+    </div>
+
+    <div class="oferta mt-l rv">
+      <ul class="stack">
+        <li><span>Gravação completa do <b style="color:var(--txt)">Dia 1</b>: Canva com IA</span><b>R$ 297</b></li>
+        <li><span>Gravação completa do <b style="color:var(--txt)">Dia 2</b>: Edição de Vídeo com IA</span><b>R$ 297</b></li>
+        <li><span><b style="color:var(--txt)">Materiais</b> utilizados na imersão</span><b>R$ 97</b></li>
+        <li><span><b style="color:var(--txt)">Biblioteca de prompts</b> exclusivos</span><b>R$ 147</b></li>
+        <li><span><b style="color:var(--txt)">Checklist de execução</b> (download seu, sem prazo)</span><b>R$ 67</b></li>
+      </ul>
+
+      <div class="stack-total"><span>Valor real do pacote</span><b>R$ 905</b></div>
+
+      <div class="preco-final">
+        <div class="preco-label">Passe Premium</div>
+        <div class="preco"><small>R$</small>137,90</div>
+        <div class="parcela">ou 12x de R$ 13,79</div>
+      </div>
+
+      <a class="cta" href="https://CHECKOUT.com.br/passe-premium" data-cta>🚀 Garantir acesso agora</a>
+      <p class="cta-nota">Compra segura · Pix, cartão ou boleto · Garantia de 7 dias</p>
+
+      <p class="oferta-fine">
+        As gravações ficam disponíveis na área de membros por <b style="color:var(--txt-2)">3 meses</b>,
+        contados a partir da publicação (logo após a imersão). Os materiais em arquivo
+        (prompts, checklist e templates) você baixa e mantém sem prazo.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 7. COMO FUNCIONA O ACESSO ══════════════ -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap rv">
+    <div class="acesso">
+      <h3 style="margin-bottom:8px">Como funciona o acesso</h3>
+      <p style="color:var(--txt-2);font-size:15.5px">Tudo transparente, sem letra miúda:</p>
+
+      <ul class="acesso-linhas">
+        <li><i>📅</i><span>As gravações são publicadas na área de membros <b>logo após a imersão</b>, a partir de 21 de setembro.</span></li>
+        <li><i>🎥</i><span>Você assiste quantas vezes quiser <b>por 3 meses</b>, contados a partir da publicação.</span></li>
+        <li><i>📥</i><span>Prompts, checklist e templates são <b>download seu, sem prazo nenhum</b>.</span></li>
+        <li><i>📱</i><span>Funciona no <b>celular, tablet e computador</b>. Pausa em um, continua no outro.</span></li>
+        <li><i>🔄</i><span>Materiais complementares publicados durante o período <b>entram sem custo extra</b>.</span></li>
+        <li><i>🛡️</i><span><b>7 dias de garantia</b> a partir da compra, sem justificativa.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 8. GARANTIA ══════════════ -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap rv">
+    <div class="garantia">
+      <div class="selo"><b>7</b><small>Dias</small></div>
+      <div>
+        <h3 style="margin-bottom:10px">Decida sem pressa.</h3>
+        <p style="color:var(--txt-2)">
+          Adicione o passe agora e, se mudar de ideia, é só mandar uma mensagem em até
+          <b style="color:var(--txt)">7 dias</b>. Devolvemos o valor integral, sem formulário e sem justificativa.
+        </p>
+        <p style="color:var(--txt-3);font-size:14px;margin-top:12px">
+          O risco de decidir agora é zero. O de deixar para depois é chegar no domingo à noite
+          com metade das anotações pela metade.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 9. FAQ ══════════════ -->
+<section class="sec" style="background:linear-gradient(180deg,transparent,rgba(10,8,22,.7),transparent)">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="eyebrow">Dúvidas rápidas</div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+
+    <div class="faq mt-l rv">
+      <details open>
+        <summary>Eu já paguei a imersão. Isso aqui é outra coisa?</summary>
+        <p>Sua vaga ao vivo está garantida e nada muda nisso. O Passe Premium é um complemento opcional: adiciona as gravações, os materiais, os prompts e o checklist.</p>
+      </details>
+      <details>
+        <summary>Posso decidir depois da imersão?</summary>
+        <p>Pode. Este link continua aqui na sua área de membros. Mas quem adiciona antes assiste ao vivo mais tranquilo, sabendo que está tudo gravado, e recebe o acesso assim que as gravações são publicadas.</p>
+      </details>
+      <details>
+        <summary>Por quanto tempo eu tenho acesso?</summary>
+        <p>As gravações ficam disponíveis por 3 meses, contados a partir da publicação na área de membros (logo depois da imersão). É tempo de sobra para rever tudo, aplicar em projetos reais e montar seu fluxo de produção.</p>
+        <p>Já os materiais em arquivo (prompts, checklist e templates) você baixa e guarda para sempre.</p>
+      </details>
+      <details>
+        <summary>Quando as gravações ficam disponíveis?</summary>
+        <p>Logo após o encerramento da imersão, a partir de 21 de setembro. Você recebe um aviso por e-mail assim que estiverem no ar.</p>
+      </details>
+      <details>
+        <summary>As gravações são as aulas completas?</summary>
+        <p>Sim, os dois dias na íntegra, incluindo as perguntas respondidas ao vivo, que costumam ser a parte mais rica.</p>
+      </details>
+      <details>
+        <summary>E se eu não puder participar de um dos dias?</summary>
+        <p>Você assiste ao dia que perdeu na íntegra, no seu ritmo. É um dos motivos mais comuns para adicionar o passe antes.</p>
+      </details>
+      <details>
+        <summary>Consigo assistir pelo celular?</summary>
+        <p>Sim. Funciona no celular, tablet e computador, e você pode pausar em um dispositivo e continuar em outro.</p>
+      </details>
+      <details>
+        <summary>Posso baixar os vídeos?</summary>
+        <p>Os vídeos ficam para assistir online na área de membros. Os materiais de apoio (prompts, checklist, templates) são para download e ficam com você sem prazo.</p>
+      </details>
+      <details>
+        <summary>Quando recebo o acesso ao passe?</summary>
+        <p>A área do Passe Premium é liberada assim que o pagamento é aprovado, o que costuma levar poucos minutos no Pix ou no cartão. Os materiais já entram ali, e as gravações são adicionadas depois da imersão.</p>
+      </details>
+      <details>
+        <summary>E se eu me arrepender?</summary>
+        <p>7 dias de garantia incondicional. Uma mensagem e devolvemos tudo.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 10. CTA FINAL ══════════════ -->
+<section class="final">
+  <div class="glow glow-roxo" style="width:700px;height:480px;top:0;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap">
+    <div class="eyebrow rv">Decisão de 30 segundos</div>
+    <h2 class="rv">Entre no sábado sabendo<br>que <span class="grad-ouro">nada vai se perder</span>.</h2>
+    <p class="lead center mt rv">
+      Você já garantiu a vaga. O passe garante que os dois dias continuem rendendo
+      muito depois que o Zoom fechar.
+    </p>
+    <div class="cta-bloco rv">
+      <a class="cta" href="https://CHECKOUT.com.br/passe-premium" data-cta>🔥 Adicionar o Passe Premium</a>
+      <p class="cta-nota">R$ 137,90 ou 12x de R$ 13,79 · Garantia de 7 dias</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-logo">Multiverso dos Criativos</div>
+    <p>
+      Ideias sem limites. Criação sem fronteiras.<br>
+      © 2026 [SUA EMPRESA] · CNPJ [00.000.000/0001-00]<br>
+      <a href="/termos">Termos de uso</a> · <a href="/privacidade">Política de privacidade</a> · <a href="mailto:SEU@EMAIL.com">Suporte</a>
+    </p>
+    <p class="footer-regras">
+      Passe Premium: acesso às gravações da imersão na área de membros por 3 meses, contados a partir
+      da data de publicação. Materiais para download (prompts, checklist e templates) sem prazo de expiração.
+      Garantia de 7 dias a partir da compra, conforme o Código de Defesa do Consumidor.
+    </p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="sticky-preco"><b>R$ 137,90</b><small>ou 12x R$ 13,79</small></div>
+  <a class="cta" href="https://CHECKOUT.com.br/passe-premium" data-cta>🚀 Quero o passe</a>
+</div>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÃO — mexa só aqui
+   ============================================================ */
+const CONFIG = {
+  // Início da imersão (Dia 1). O contador marca o tempo até lá.
+  inicioImersao: '2026-09-19T19:00:00-03:00'
+};
+
+/* ---------- Countdown até a imersão ----------
+   Depois que o evento começa, o contador some sozinho e o título muda.
+   Assim a mesma página continua fazendo sentido para quem entra
+   antes, durante ou depois do evento — sem prazo falso.        */
+(function(){
+  const alvo = new Date(CONFIG.inicioImersao).getTime();
+  const box = document.getElementById('count');
+  const titulo = document.getElementById('count-titulo');
+  const el = {d:document.querySelector('[data-d]'),h:document.querySelector('[data-h]'),m:document.querySelector('[data-m]'),s:document.querySelector('[data-s]')};
+  const z = n => String(Math.max(0,n)).padStart(2,'0');
+
+  function tick(){
+    const dif = alvo - Date.now();
+    if(dif <= 0){
+      box.style.display = 'none';
+      titulo.textContent = 'Disponível a qualquer momento na sua área de membros';
+      titulo.style.color = 'var(--txt-2)';
+      return;
+    }
+    el.d.textContent = z(Math.floor(dif/864e5));
+    el.h.textContent = z(Math.floor(dif/36e5)%24);
+    el.m.textContent = z(Math.floor(dif/6e4)%60);
+    el.s.textContent = z(Math.floor(dif/1e3)%60);
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+/* ---------- Sticky CTA ---------- */
+(function(){
+  const sticky=document.getElementById('sticky'), hero=document.querySelector('.hero');
+  new IntersectionObserver(([e])=>sticky.classList.toggle('on',!e.isIntersecting),{threshold:0}).observe(hero);
+})();
+
+/* ---------- Reveal + animação das barras ---------- */
+(function(){
+  const io=new IntersectionObserver((es,o)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); o.unobserve(e.target); } });
+  },{threshold:.12,rootMargin:'0px 0px -40px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  const barras=document.getElementById('barras');
+  new IntersectionObserver((es,o)=>{
+    es.forEach(e=>{
+      if(!e.isIntersecting) return;
+      barras.querySelectorAll('i').forEach((b,i)=>{
+        b.style.height='0';
+        setTimeout(()=>{ b.style.height=b.dataset.h; }, 120*i);
+      });
+      o.unobserve(e.target);
+    });
+  },{threshold:.4}).observe(barras);
+})();
+
+/* ---------- Tracking ---------- */
+document.querySelectorAll('[data-cta]').forEach(b=>{
+  b.addEventListener('click',()=>{
+    if(window.fbq) fbq('track','InitiateCheckout',{value:137.90,currency:'BRL',content_name:'Passe Premium'});
+    if(window.gtag) gtag('event','begin_checkout',{value:137.90,currency:'BRL'});
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find / -maxdepth 6 -iname \"*skill-creator*\" -type d 2>/dev/null | head -50)",
+      "PowerShell(\"---\")",
+      "mcp__claude-in-chrome__computer",
+      "mcp__claude-in-chrome__navigate"
+    ]
+  }
+}

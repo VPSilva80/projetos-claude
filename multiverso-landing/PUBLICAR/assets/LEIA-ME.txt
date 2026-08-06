@@ -1,0 +1,23 @@
+COLOQUE AQUI AS IMAGENS DA LANDING PAGE
+=======================================
+
+Arquivos que as páginas procuram nesta pasta:
+
+1. capa-multiverso.jpg   →  1656 x 943 px  (a arte horizontal da imersão)
+                            Aparece no topo da página principal.
+                            Enquanto não existir, aparece um espaço reservado.
+
+2. logo.png              →  600 px de largura, fundo TRANSPARENTE
+                            Opcional. Sem ela, entra a versão em texto.
+
+3. arte-evento.jpg       →  1080 x 1080 px  (a arte quadrada)
+                            Usada na página do Passe Premium.
+
+4. og-multiverso.jpg     →  1200 x 630 px
+                            É a miniatura que aparece quando alguém
+                            compartilha o link no WhatsApp ou Instagram.
+
+DICA: exporte em JPG com qualidade 80. As artes têm muito preto e neon,
+o JPG segura bem e carrega rápido no 4G.
+
+Depois de colocar os arquivos aqui, apague este LEIA-ME.txt.

@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ============================================================
+     SEO
+     ============================================================ -->
+<title>Imersão Multiverso dos Criativos | Canva + IA + Vídeo ao vivo</title>
+<meta name="description" content="2 dias ao vivo para criar posts, carrosséis, criativos e vídeos profissionais em minutos usando Canva + Inteligência Artificial. Mesmo começando do zero. R$ 19,90.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://SEUDOMINIO.com.br/imersao">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Imersão Multiverso dos Criativos | Ideias sem limites. Criação sem fronteiras.">
+<meta property="og:description" content="2 dias ao vivo. Canva com IA + Edição de Vídeo com IA. Produza conteúdo profissional em uma fração do tempo. R$ 19,90.">
+<meta property="og:image" content="https://SEUDOMINIO.com.br/assets/capa-multiverso.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Imersão Multiverso dos Criativos",
+  "description": "Imersão ao vivo de 2 dias sobre Canva com Inteligência Artificial e Edição de Vídeo com IA.",
+  "startDate": "2026-09-19T19:00:00-03:00",
+  "endDate": "2026-09-20T22:00:00-03:00",
+  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location": { "@type": "VirtualLocation", "url": "https://SEUDOMINIO.com.br/imersao" },
+  "organizer": { "@type": "Person", "name": "SEU NOME AQUI" },
+  "offers": {
+    "@type": "Offer", "price": "19.90", "priceCurrency": "BRL",
+    "availability": "https://schema.org/LimitedAvailability",
+    "url": "https://CHECKOUT.com.br/multiverso"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   1. TOKENS
+   ============================================================ */
+:root{
+  --preto:#04030A;
+  --preto-2:#0A0816;
+  --preto-3:#110D22;
+  --linha:rgba(255,255,255,.08);
+
+  --dourado:#F2C14E; --dourado-2:#FFE29A; --dourado-3:#B8862B;
+  --roxo:#A855F7; --roxo-2:#6D28D9;
+  --azul:#22D3FF; --rosa:#FF2ED1;
+  --verde:#00E27A; --verde-2:#00B863;
+
+  --txt:#F4F2FF; --txt-2:#B7B2CC; --txt-3:#7C7793;
+
+  --r-sm:14px; --r:20px; --r-lg:30px;
+  --max:1000px;      /* container geral */
+  --leitura:680px;   /* largura de leitura confortável */
+
+  --f-display:'Sora',system-ui,-apple-system,sans-serif;
+  --f-body:'Inter',system-ui,-apple-system,sans-serif;
+  --sombra-cta:0 10px 40px rgba(0,226,122,.35);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--preto);
+  color:var(--txt);
+  font-family:var(--f-body);
+  font-size:17px;
+  line-height:1.65;
+  overflow-x:hidden;
+  padding-bottom:88px;
+  -webkit-font-smoothing:antialiased;
+}
+@media(min-width:900px){ body{padding-bottom:0} }
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+
+/* ============================================================
+   2. AURORA BOREAL ANIMADA (substitui o grid)
+   ============================================================ */
+.aurora{
+  position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+  background:var(--preto);
+}
+/* véu de estrelas discreto */
+.aurora::after{
+  content:'';position:absolute;inset:0;opacity:.5;
+  background-image:
+    radial-gradient(1px 1px at 12% 18%,rgba(255,255,255,.7),transparent),
+    radial-gradient(1px 1px at 68% 9%,rgba(255,255,255,.55),transparent),
+    radial-gradient(1.4px 1.4px at 34% 62%,rgba(255,255,255,.5),transparent),
+    radial-gradient(1px 1px at 88% 44%,rgba(255,255,255,.6),transparent),
+    radial-gradient(1px 1px at 22% 84%,rgba(255,255,255,.45),transparent),
+    radial-gradient(1.2px 1.2px at 78% 76%,rgba(255,255,255,.5),transparent),
+    radial-gradient(1px 1px at 52% 32%,rgba(255,255,255,.4),transparent);
+  background-size:600px 600px;
+  animation:brilhaEstrela 7s ease-in-out infinite alternate;
+}
+@keyframes brilhaEstrela{from{opacity:.28}to{opacity:.62}}
+
+.faixa{
+  position:absolute;border-radius:50%;
+  filter:blur(90px);
+  mix-blend-mode:screen;
+  will-change:transform;
+}
+.f1{
+  width:70vw;height:52vw;min-width:520px;min-height:380px;
+  top:-16%;left:-12%;
+  background:radial-gradient(ellipse at center,rgba(168,85,247,.62),rgba(109,40,217,.22) 45%,transparent 72%);
+  animation:onda1 26s ease-in-out infinite;
+}
+.f2{
+  width:66vw;height:46vw;min-width:480px;min-height:340px;
+  top:-8%;right:-16%;
+  background:radial-gradient(ellipse at center,rgba(34,211,255,.5),rgba(34,211,255,.14) 45%,transparent 72%);
+  animation:onda2 32s ease-in-out infinite;
+}
+.f3{
+  width:58vw;height:40vw;min-width:420px;min-height:300px;
+  top:22%;left:8%;
+  background:radial-gradient(ellipse at center,rgba(242,193,78,.42),rgba(242,193,78,.1) 45%,transparent 72%);
+  animation:onda3 38s ease-in-out infinite;
+}
+.f4{
+  width:62vw;height:44vw;min-width:440px;min-height:320px;
+  top:52%;right:-8%;
+  background:radial-gradient(ellipse at center,rgba(255,46,209,.42),rgba(255,46,209,.1) 45%,transparent 72%);
+  animation:onda4 30s ease-in-out infinite;
+}
+.f5{
+  width:76vw;height:34vw;min-width:520px;min-height:260px;
+  bottom:-14%;left:-6%;
+  background:radial-gradient(ellipse at center,rgba(109,40,217,.5),rgba(34,211,255,.14) 50%,transparent 74%);
+  animation:onda5 34s ease-in-out infinite;
+}
+@keyframes onda1{
+  0%,100%{transform:translate3d(0,0,0) scale(1) rotate(0deg)}
+  33%{transform:translate3d(9vw,7vh,0) scale(1.16) rotate(8deg)}
+  66%{transform:translate3d(-5vw,12vh,0) scale(.92) rotate(-6deg)}
+}
+@keyframes onda2{
+  0%,100%{transform:translate3d(0,0,0) scale(1.05) rotate(0deg)}
+  40%{transform:translate3d(-11vw,9vh,0) scale(.88) rotate(-9deg)}
+  70%{transform:translate3d(4vw,-5vh,0) scale(1.2) rotate(5deg)}
+}
+@keyframes onda3{
+  0%,100%{transform:translate3d(0,0,0) scale(.95)}
+  50%{transform:translate3d(13vw,-8vh,0) scale(1.25)}
+}
+@keyframes onda4{
+  0%,100%{transform:translate3d(0,0,0) scale(1) rotate(0deg)}
+  35%{transform:translate3d(-9vw,-10vh,0) scale(1.18) rotate(7deg)}
+  75%{transform:translate3d(6vw,6vh,0) scale(.9) rotate(-5deg)}
+}
+@keyframes onda5{
+  0%,100%{transform:translate3d(0,0,0) scale(1.1)}
+  45%{transform:translate3d(10vw,-6vh,0) scale(.9)}
+}
+@media(prefers-reduced-motion:reduce){
+  .faixa,.aurora::after{animation:none}
+}
+
+/* ============================================================
+   3. CURSOR FOGUETE + RASTRO DE FUMAÇA
+   ============================================================ */
+#fumaca{position:fixed;inset:0;z-index:9998;pointer-events:none}
+#foguete{
+  position:fixed;top:0;left:0;z-index:9999;pointer-events:none;
+  width:66px;height:57px;
+  will-change:transform;
+  filter:drop-shadow(0 3px 7px rgba(0,0,0,.55)) drop-shadow(0 0 10px rgba(255,170,60,.5));
+}
+#foguete svg{display:block;width:100%;height:100%;overflow:visible}
+
+/* só entra em ação em telas com mouse de verdade */
+body.foguete-on,
+body.foguete-on a,
+body.foguete-on button,
+body.foguete-on summary,
+body.foguete-on details{cursor:none}
+
+/* ---- vida do personagem ----
+   Todos os eixos de rotação usam transform-box:view-box, então a origem
+   é dada nas mesmas coordenadas do viewBox do SVG (110 x 100). */
+.cur-flutua{animation:curFlutua 2.4s ease-in-out infinite}
+@keyframes curFlutua{0%,100%{transform:translateY(0)}50%{transform:translateY(-2.5px)}}
+
+/* uma perninha só: a outra está do outro lado da nave */
+.cur-perna{transform-box:view-box;transform-origin:55px 66px;animation:curPerna .62s ease-in-out infinite alternate}
+@keyframes curPerna{from{transform:rotate(-16deg)}to{transform:rotate(13deg)}}
+
+/* Os dois braços acenam, com tempos diferentes para não
+   parecerem um espelho do outro. Só abrem para FORA: se voltassem
+   em direção à cabeça, a mão entraria no raio do capacete. */
+.cur-acena{transform-box:view-box;transform-origin:63px 49px;animation:curAcena .44s ease-in-out infinite alternate}
+@keyframes curAcena{from{transform:rotate(0deg)}to{transform:rotate(22deg)}}
+
+.cur-acena-tras{transform-box:view-box;transform-origin:41px 49px;animation:curAcenaTras .58s ease-in-out infinite alternate}
+@keyframes curAcenaTras{from{transform:rotate(6deg)}to{transform:rotate(-17deg)}}
+
+.cur-antena{transform-box:view-box;transform-origin:54px 18px;animation:curAntena 1.5s ease-in-out infinite alternate}
+@keyframes curAntena{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+
+.cur-chama{transform-box:view-box;transform-origin:32px 77.5px;animation:curChama .12s ease-in-out infinite alternate}
+@keyframes curChama{from{transform:scale(.72,.86);opacity:.82}to{transform:scale(1.28,1.08);opacity:1}}
+
+/* ============================================================
+   4. LAYOUT — tudo centralizado
+   ============================================================ */
+.page{position:relative;z-index:2}
+.wrap{
+  width:100%;max-width:var(--max);
+  margin-inline:auto;
+  padding-inline:24px;
+  text-align:center;
+}
+@media(min-width:700px){ .wrap{padding-inline:40px} }
+.sec{padding:78px 0}
+@media(min-width:900px){ .sec{padding:118px 0} }
+
+/* bloco de leitura centralizado */
+.leitura{max-width:var(--leitura);margin-inline:auto}
+
+.eyebrow{
+  font-family:var(--f-display);
+  font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--dourado);margin-bottom:18px;
+}
+h1,h2,h3{font-family:var(--f-display);line-height:1.1;letter-spacing:-.02em;font-weight:800}
+h1{font-size:clamp(30px,6.6vw,54px)}
+h2{font-size:clamp(26px,5vw,42px);margin-bottom:20px}
+h3{font-size:clamp(19px,3vw,23px);font-weight:700;line-height:1.28}
+.lead{font-size:clamp(16px,2.3vw,19px);color:var(--txt-2);max-width:60ch;margin-inline:auto}
+.mt-s{margin-top:16px}.mt{margin-top:32px}.mt-l{margin-top:54px}
+
+.grad-ouro{background:linear-gradient(100deg,var(--dourado-2),var(--dourado) 40%,var(--dourado-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.grad-neon{background:linear-gradient(100deg,var(--azul),var(--roxo) 55%,var(--rosa));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.divisor{
+  width:64px;height:2px;margin:0 auto 26px;border-radius:2px;
+  background:linear-gradient(90deg,transparent,var(--dourado),transparent);
+}
+
+/* ============================================================
+   5. CTA
+   ============================================================ */
+.cta{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;max-width:440px;margin-inline:auto;
+  padding:21px 26px;
+  background:linear-gradient(180deg,var(--verde),var(--verde-2));
+  color:#031B0E;
+  font-family:var(--f-display);font-size:clamp(16px,3.2vw,18.5px);font-weight:800;
+  border:none;border-radius:999px;cursor:pointer;
+  box-shadow:var(--sombra-cta);
+  animation:pulsa 2.6s ease-in-out infinite;
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.cta:hover{transform:translateY(-2px) scale(1.015);box-shadow:0 14px 52px rgba(0,226,122,.5)}
+.cta:active{transform:translateY(0) scale(.99)}
+@keyframes pulsa{
+  0%,100%{box-shadow:0 10px 40px rgba(0,226,122,.32),0 0 0 0 rgba(0,226,122,.42)}
+  50%{box-shadow:0 10px 44px rgba(0,226,122,.42),0 0 0 16px rgba(0,226,122,0)}
+}
+@media(prefers-reduced-motion:reduce){ .cta{animation:none} }
+.cta-nota{font-size:13.5px;color:var(--txt-3);margin-top:16px;line-height:1.55}
+.cta-bloco{margin-top:38px}
+
+/* ============================================================
+   6. TOPBAR
+   ============================================================ */
+.topbar{
+  position:relative;z-index:60;
+  background:linear-gradient(90deg,var(--roxo-2),var(--roxo) 50%,var(--rosa));
+  text-align:center;padding:10px 18px;
+  font-size:13px;font-weight:600;
+}
+
+/* ============================================================
+   7. HERO
+   ============================================================ */
+.hero{padding:44px 0 72px}
+@media(min-width:900px){ .hero{padding:60px 0 100px} }
+
+.logo-txt{font-family:var(--f-display);line-height:1.05;margin-bottom:34px}
+.logo-txt i{display:block;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.44em;text-transform:uppercase;color:var(--txt-3);margin-bottom:8px}
+.logo-txt b{display:block;font-size:clamp(18px,3.4vw,22px);font-weight:800;letter-spacing:-.01em}
+.logo-img{max-width:200px;margin:0 auto 34px}
+
+/* capa do evento */
+.capa{
+  max-width:920px;margin:0 auto 44px;
+  border-radius:var(--r-lg);overflow:hidden;
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 24px 90px rgba(109,40,217,.35),0 0 0 1px rgba(255,255,255,.04);
+}
+.capa img{width:100%}
+.capa-ph{
+  aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;padding:32px;text-align:center;
+  background:
+    radial-gradient(circle at 28% 34%,rgba(242,193,78,.3),transparent 52%),
+    radial-gradient(circle at 70% 44%,rgba(255,46,209,.3),transparent 52%),
+    radial-gradient(circle at 50% 88%,rgba(34,211,255,.22),transparent 58%),
+    var(--preto-2);
+}
+.capa-ph b{font-family:var(--f-display);font-size:15px;letter-spacing:.08em;color:rgba(255,255,255,.9)}
+.capa-ph small{font-size:12.5px;color:rgba(255,255,255,.6);line-height:1.6}
+
+.tag-linha{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;margin-bottom:26px}
+.tag{
+  font-family:var(--f-display);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:8px 14px;border-radius:999px;
+  border:1px solid rgba(242,193,78,.35);color:var(--dourado-2);
+  background:rgba(242,193,78,.07);
+}
+.tag.neon{border-color:rgba(34,211,255,.4);color:var(--azul);background:rgba(34,211,255,.07)}
+
+.hook{
+  font-family:var(--f-display);font-size:clamp(15px,2.5vw,17.5px);font-weight:600;line-height:1.5;
+  color:var(--txt-2);max-width:600px;margin:0 auto 28px;
+  padding:20px 24px;border-radius:var(--r);
+  background:rgba(10,8,22,.6);border:1px solid var(--linha);
+  backdrop-filter:blur(8px);
+}
+.hook b{color:var(--txt)}
+.hook span{color:var(--dourado-2)}
+
+.hero-sub{font-size:clamp(15.5px,2.4vw,18px);color:var(--txt-2);max-width:58ch;margin:20px auto 0}
+
+/* faixa de datas */
+.data-strip{
+  display:inline-flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 20px;
+  margin:34px auto 0;padding:15px 28px;border-radius:var(--r);
+  border:1px solid rgba(242,193,78,.3);background:rgba(242,193,78,.06);
+  backdrop-filter:blur(8px);
+}
+.data-item{display:flex;align-items:center;gap:8px;font-size:14.5px;color:var(--txt-2);font-weight:500}
+.data-item b{font-family:var(--f-display);color:var(--dourado-2);font-weight:700}
+.data-sep{width:1px;height:22px;background:rgba(255,255,255,.14)}
+@media(max-width:600px){ .data-sep{display:none} .data-strip{flex-direction:column;gap:10px;padding:18px 24px;width:100%} }
+
+/* preço */
+.preco-box{
+  max-width:440px;margin:34px auto 0;
+  border:1px solid rgba(242,193,78,.3);
+  background:linear-gradient(180deg,rgba(242,193,78,.09),rgba(4,3,10,.5));
+  border-radius:var(--r-lg);padding:28px 26px;
+  backdrop-filter:blur(10px);
+}
+.preco-label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt-3);font-weight:700}
+.preco{font-family:var(--f-display);font-size:clamp(42px,10vw,58px);font-weight:800;line-height:1;margin:8px 0 4px}
+.preco small{font-size:.4em;font-weight:600;vertical-align:.5em;margin-right:2px}
+.preco-nota{font-size:14px;color:var(--txt-2)}
+
+/* countdown */
+.count{display:flex;gap:9px;margin:24px auto 0;max-width:400px}
+.count-item{flex:1;padding:13px 4px;background:rgba(17,13,34,.7);border:1px solid var(--linha);border-radius:var(--r-sm)}
+.count-n{font-family:var(--f-display);font-size:clamp(22px,5.2vw,29px);font-weight:800;line-height:1;color:var(--dourado-2)}
+.count-l{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-3);margin-top:6px;font-weight:600}
+.count-titulo{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt-3);font-weight:700;margin-top:26px}
+
+/* barra de vagas */
+.vagas{max-width:400px;margin:22px auto 0}
+.vagas-topo{display:flex;justify-content:space-between;font-size:12.5px;color:var(--txt-2);margin-bottom:8px;font-weight:600}
+.vagas-topo b{color:var(--rosa)}
+.barra{height:8px;border-radius:999px;background:rgba(255,255,255,.09);overflow:hidden}
+.barra span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--dourado),var(--rosa));box-shadow:0 0 14px rgba(255,46,209,.6)}
+
+/* prova social */
+.prova-linha{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 22px;
+  margin-top:44px;padding-top:30px;border-top:1px solid var(--linha);
+  font-size:13.5px;color:var(--txt-3);
+}
+.prova-linha b{color:var(--txt-2)}
+.estrelas{color:var(--dourado);letter-spacing:2px}
+
+/* ============================================================
+   8. CARDS GERAIS (conteúdo centralizado)
+   ============================================================ */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr}
+.g3{grid-template-columns:1fr}
+@media(min-width:720px){ .g2{grid-template-columns:1fr 1fr} .g3{grid-template-columns:1fr 1fr} }
+@media(min-width:980px){ .g3{grid-template-columns:repeat(3,1fr)} }
+
+.card{
+  display:flex;flex-direction:column;text-align:center;
+  background:rgba(10,8,22,.62);
+  border:1px solid var(--linha);border-radius:var(--r);
+  padding:32px 26px;backdrop-filter:blur(10px);
+  transition:border-color .25s ease,transform .25s ease;
+}
+.card:hover{border-color:rgba(168,85,247,.42);transform:translateY(-4px)}
+.card-ico{
+  width:56px;height:56px;border-radius:16px;margin:0 auto 20px;
+  display:flex;align-items:center;justify-content:center;font-size:25px;
+  background:linear-gradient(140deg,rgba(168,85,247,.28),rgba(34,211,255,.18));
+  border:1px solid rgba(168,85,247,.35);
+}
+.card h3{margin-bottom:10px}
+.card p{color:var(--txt-2);font-size:15.5px;flex:1}
+
+/* ============================================================
+   9. DOIS GRUPOS
+   ============================================================ */
+.grupos{display:grid;gap:18px}
+@media(min-width:820px){ .grupos{grid-template-columns:1fr 1fr;gap:22px} }
+.grupo{
+  border-radius:var(--r-lg);padding:34px 26px;border:1px solid var(--linha);
+  text-align:center;backdrop-filter:blur(10px);
+}
+.grupo-a{background:rgba(255,60,60,.05);border-color:rgba(255,80,80,.22)}
+.grupo-b{background:rgba(0,226,122,.06);border-color:rgba(0,226,122,.3);box-shadow:0 0 60px rgba(0,226,122,.1)}
+.grupo-tit{font-family:var(--f-display);font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px}
+.grupo-a .grupo-tit{color:#FF7A7A}
+.grupo-b .grupo-tit{color:var(--verde)}
+.grupo ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.grupo li{font-size:15.5px;line-height:1.5;color:var(--txt-2)}
+.grupo li::before{display:block;font-size:14px;margin-bottom:4px}
+.grupo-a li::before{content:'✕';color:#FF7A7A}
+.grupo-b li::before{content:'✓';color:var(--verde)}
+.grupo-fim{margin-top:26px;padding-top:20px;border-top:1px solid var(--linha);font-size:15px;font-weight:600;color:var(--txt)}
+
+/* ============================================================
+   10. DORES
+   ============================================================ */
+.dores{display:grid;gap:12px}
+@media(min-width:720px){ .dores{grid-template-columns:1fr 1fr} }
+.dor{
+  padding:18px 20px;border-radius:var(--r-sm);text-align:center;
+  background:rgba(10,8,22,.55);border:1px solid var(--linha);
+  font-size:15.5px;color:var(--txt-2);line-height:1.5;
+  backdrop-filter:blur(6px);
+}
+.dor i{display:block;font-style:normal;color:var(--rosa);font-weight:700;margin-bottom:5px;font-size:13px}
+
+/* ============================================================
+   11. PORTAIS
+   ============================================================ */
+.portais{display:grid;gap:18px;counter-reset:p}
+@media(min-width:760px){ .portais{grid-template-columns:1fr 1fr} }
+@media(min-width:1000px){ .portais{grid-template-columns:repeat(4,1fr)} }
+.portal{
+  text-align:center;padding:34px 22px;border-radius:var(--r);
+  background:rgba(17,13,34,.6);border:1px solid rgba(168,85,247,.22);
+  counter-increment:p;backdrop-filter:blur(10px);
+  transition:border-color .25s,transform .25s;
+}
+.portal:hover{border-color:rgba(168,85,247,.5);transform:translateY(-4px)}
+.portal::before{
+  content:'0' counter(p);
+  display:block;margin-bottom:14px;
+  font-family:var(--f-display);font-size:42px;font-weight:800;line-height:1;
+  background:linear-gradient(160deg,var(--dourado-2),var(--roxo));
+  -webkit-background-clip:text;background-clip:text;color:transparent;opacity:.6;
+}
+.portal h3{font-size:19px;margin-bottom:10px}
+.portal p{font-size:15px;color:var(--txt-2)}
+
+/* ============================================================
+   12. PROGRAMA
+   ============================================================ */
+.dias{display:grid;gap:22px}
+@media(min-width:900px){ .dias{grid-template-columns:1fr 1fr;gap:26px} }
+.dia{
+  border-radius:var(--r-lg);padding:38px 28px;text-align:center;
+  background:rgba(10,8,22,.62);border:1px solid var(--linha);
+  position:relative;overflow:hidden;backdrop-filter:blur(10px);
+}
+.dia::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.dia-1::before{background:linear-gradient(90deg,var(--dourado),var(--rosa))}
+.dia-2::before{background:linear-gradient(90deg,var(--azul),var(--roxo))}
+.dia-num{font-family:var(--f-display);font-size:11.5px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--txt-3);margin-bottom:10px}
+.dia h3{margin-bottom:8px;font-size:clamp(21px,4vw,26px);font-weight:800}
+.dia-1 h3{color:var(--dourado-2)}
+.dia-2 h3{color:var(--azul)}
+.dia-data{font-size:13.5px;color:var(--txt-2);font-weight:600;margin-bottom:16px}
+.dia-desc{color:var(--txt-2);font-size:15.5px;max-width:38ch;margin:0 auto 28px}
+.tl{list-style:none;display:flex;flex-direction:column;gap:20px}
+.tl li{padding-top:20px;border-top:1px solid var(--linha)}
+.tl li:first-child{padding-top:0;border-top:none}
+.tl b{display:block;font-family:var(--f-display);font-size:16px;font-weight:700;margin-bottom:5px}
+.tl span{font-size:14.5px;color:var(--txt-2);line-height:1.55;display:block;max-width:36ch;margin-inline:auto}
+
+/* ============================================================
+   13. ENTREGÁVEIS
+   ============================================================ */
+.entregas{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+@media(min-width:760px){ .entregas{grid-template-columns:repeat(3,1fr);gap:16px} }
+.entrega{
+  padding:26px 16px;text-align:center;border-radius:var(--r-sm);
+  background:rgba(10,8,22,.55);border:1px solid var(--linha);
+  backdrop-filter:blur(6px);transition:.25s;
+}
+.entrega:hover{border-color:rgba(242,193,78,.42);transform:translateY(-3px)}
+.entrega i{display:block;font-size:26px;margin-bottom:11px;font-style:normal}
+.entrega b{font-family:var(--f-display);font-size:14.5px;font-weight:700;display:block;line-height:1.3}
+
+/* ============================================================
+   14. PROVAS
+   ============================================================ */
+.depos{display:grid;gap:18px}
+@media(min-width:820px){ .depos{grid-template-columns:repeat(3,1fr)} }
+.depo{
+  background:rgba(10,8,22,.62);border:1px solid var(--linha);border-radius:var(--r);
+  padding:30px 24px;display:flex;flex-direction:column;text-align:center;
+  backdrop-filter:blur(10px);
+}
+.depo .estrelas{font-size:14px;margin-bottom:14px}
+.depo p{font-size:15.5px;color:var(--txt);line-height:1.6;flex:1}
+.depo-autor{margin-top:22px;padding-top:18px;border-top:1px solid var(--linha)}
+.avatar{
+  width:44px;height:44px;border-radius:50%;margin:0 auto 10px;
+  background:linear-gradient(140deg,var(--roxo),var(--azul));
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:#fff;
+}
+.depo-autor b{display:block;font-size:14.5px}
+.depo-autor small{color:var(--txt-3);font-size:12.5px}
+
+.antes-depois{display:grid;gap:18px;margin-top:34px}
+@media(min-width:760px){ .antes-depois{grid-template-columns:1fr 1fr} }
+.ad{border-radius:var(--r);overflow:hidden;border:1px solid var(--linha);background:rgba(10,8,22,.55)}
+.ad-img{
+  aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;
+  font-size:13px;color:var(--txt-3);text-align:center;padding:22px;font-weight:600;line-height:1.6;
+  background:repeating-linear-gradient(45deg,rgba(255,255,255,.025) 0 12px,transparent 12px 24px);
+}
+.ad-tag{padding:14px 18px;font-family:var(--f-display);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;border-top:1px solid var(--linha)}
+.ad-antes .ad-tag{color:#FF7A7A}
+.ad-depois .ad-tag{color:var(--verde)}
+
+/* ============================================================
+   15. OFERTA
+   ============================================================ */
+.oferta{
+  border-radius:var(--r-lg);padding:38px 26px;max-width:620px;margin-inline:auto;
+  background:linear-gradient(180deg,rgba(168,85,247,.16),rgba(4,3,10,.7));
+  border:1px solid rgba(242,193,78,.32);
+  box-shadow:0 0 100px rgba(168,85,247,.2);
+  backdrop-filter:blur(12px);
+}
+@media(min-width:760px){ .oferta{padding:48px 44px} }
+.stack{list-style:none;margin:28px 0}
+.stack li{
+  display:flex;justify-content:space-between;align-items:flex-start;gap:16px;text-align:left;
+  padding:15px 0;border-bottom:1px dashed rgba(255,255,255,.11);font-size:15.5px;
+}
+.stack li span{color:var(--txt-2);flex:1}
+.stack li b{color:var(--dourado-2);white-space:nowrap;font-family:var(--f-display);font-size:14.5px}
+.stack-total{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding-top:20px;font-family:var(--f-display);font-weight:700;font-size:16px;text-align:left;
+}
+.stack-total b{color:var(--txt-3);text-decoration:line-through;font-size:18px}
+.preco-final{margin:30px 0 6px}
+.preco-final .preco{background:linear-gradient(100deg,var(--dourado-2),var(--dourado) 45%,var(--dourado-3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.bump-nota{
+  margin-top:26px;padding:17px 20px;border-radius:var(--r-sm);
+  background:rgba(34,211,255,.06);border:1px solid rgba(34,211,255,.22);
+  font-size:13.5px;color:var(--txt-2);line-height:1.6;
+}
+.bump-nota b{color:var(--azul)}
+
+/* ============================================================
+   16. GARANTIA
+   ============================================================ */
+.garantia{
+  max-width:640px;margin-inline:auto;
+  border-radius:var(--r-lg);padding:40px 28px;text-align:center;
+  background:rgba(0,226,122,.05);border:1px solid rgba(0,226,122,.26);
+  backdrop-filter:blur(10px);
+}
+.selo{
+  width:132px;height:132px;border-radius:50%;margin:0 auto 26px;
+  border:2px solid rgba(0,226,122,.42);
+  background:radial-gradient(circle,rgba(0,226,122,.18),transparent 70%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-family:var(--f-display);
+}
+.selo b{font-size:36px;font-weight:800;line-height:1;color:var(--verde)}
+.selo small{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt-2);margin-top:5px;font-weight:700}
+.garantia p{color:var(--txt-2);max-width:52ch;margin-inline:auto}
+
+/* ============================================================
+   17. FAQ
+   ============================================================ */
+.faq{max-width:720px;margin-inline:auto;display:flex;flex-direction:column;gap:11px;text-align:left}
+details{
+  background:rgba(10,8,22,.62);border:1px solid var(--linha);border-radius:var(--r-sm);
+  overflow:hidden;transition:border-color .2s;backdrop-filter:blur(8px);
+}
+details[open]{border-color:rgba(168,85,247,.4)}
+summary{
+  cursor:pointer;list-style:none;padding:20px 54px 20px 22px;position:relative;
+  font-family:var(--f-display);font-weight:700;font-size:16px;line-height:1.4;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:'+';position:absolute;right:22px;top:50%;transform:translateY(-50%);
+  font-size:23px;font-weight:400;color:var(--dourado);
+}
+details[open] summary::after{content:'−'}
+details p{padding:0 22px 22px;color:var(--txt-2);font-size:15.5px}
+
+/* ============================================================
+   18. CTA FINAL
+   ============================================================ */
+.final{padding:92px 0}
+.final h2{max-width:18ch;margin-inline:auto}
+
+/* ============================================================
+   19. STICKY MOBILE
+   ============================================================ */
+.sticky{
+  position:fixed;bottom:0;left:0;right:0;z-index:80;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:rgba(4,3,10,.92);backdrop-filter:blur(18px);
+  border-top:1px solid rgba(242,193,78,.22);
+  display:flex;align-items:center;gap:12px;
+  transform:translateY(110%);transition:transform .32s cubic-bezier(.4,0,.2,1);
+}
+.sticky.on{transform:translateY(0)}
+.sticky-preco{flex-shrink:0;line-height:1.15;text-align:left}
+.sticky-preco b{display:block;font-family:var(--f-display);font-size:19px;font-weight:800;color:var(--dourado-2)}
+.sticky-preco small{font-size:10.5px;color:var(--txt-3)}
+.sticky .cta{margin:0;padding:15px 18px;font-size:14.5px;max-width:none}
+@media(min-width:900px){ .sticky{display:none} }
+
+/* ============================================================
+   20. NOTIFICAÇÃO (desativada por padrão)
+   ============================================================ */
+.notif{
+  position:fixed;left:16px;bottom:100px;z-index:70;max-width:300px;
+  background:rgba(17,13,34,.96);backdrop-filter:blur(14px);
+  border:1px solid rgba(242,193,78,.28);border-radius:14px;
+  padding:13px 16px;display:flex;gap:12px;align-items:center;text-align:left;
+  opacity:0;transform:translateY(14px);transition:.35s;pointer-events:none;
+}
+.notif.on{opacity:1;transform:translateY(0)}
+@media(min-width:900px){ .notif{bottom:24px} }
+.notif-dot{width:8px;height:8px;border-radius:50%;background:var(--verde);box-shadow:0 0 10px var(--verde);flex-shrink:0}
+.notif b{font-size:13.5px;display:block}
+.notif small{font-size:11.5px;color:var(--txt-3)}
+
+/* ============================================================
+   21. FOOTER
+   ============================================================ */
+footer{padding:56px 0 40px;border-top:1px solid var(--linha);font-size:13px;color:var(--txt-3);line-height:1.8}
+footer a{color:var(--txt-2);text-decoration:underline;text-underline-offset:3px}
+.footer-logo{font-family:var(--f-display);font-size:15px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--txt-2);margin-bottom:16px}
+.footer-regras{margin-top:20px;font-size:12px;max-width:62ch;margin-inline:auto;color:#5C5872;line-height:1.7}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){ .rv{opacity:1;transform:none} }
+</style>
+</head>
+<body>
+
+<!-- ══════════════ AURORA BOREAL ══════════════ -->
+<div class="aurora" aria-hidden="true">
+  <div class="faixa f1"></div>
+  <div class="faixa f2"></div>
+  <div class="faixa f3"></div>
+  <div class="faixa f4"></div>
+  <div class="faixa f5"></div>
+</div>
+
+<!-- ══════════════ CURSOR FOGUETE ══════════════ -->
+<canvas id="fumaca" aria-hidden="true"></canvas>
+
+<!-- Alienígena astronauta montado no foguete.
+     Desenhado apontando para a DIREITA. O script espelha e inclina
+     conforme a direção do mouse. -->
+<div id="foguete" aria-hidden="true">
+<svg viewBox="0 0 116 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="curCorpo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".5" stop-color="#F4F7FC"/>
+      <stop offset="1" stop-color="#C9D3E2"/>
+    </linearGradient>
+    <linearGradient id="curFogo" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#FFD54A"/>
+      <stop offset=".3" stop-color="#FF9500"/>
+      <stop offset=".72" stop-color="#FF5722"/>
+      <stop offset="1" stop-color="#FF3D00"/>
+    </linearGradient>
+    <radialGradient id="curBrilhoBocal">
+      <stop offset="0" stop-color="#FFFDF0"/>
+      <stop offset=".55" stop-color="#FFE9A0" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#FFC814" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="curBico" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF7FD8"/>
+      <stop offset=".45" stop-color="#E838B0"/>
+      <stop offset="1" stop-color="#B01F86"/>
+    </linearGradient>
+    <radialGradient id="curVisor" cx=".38" cy=".3">
+      <stop offset="0" stop-color="#2A2545"/>
+      <stop offset="1" stop-color="#0B0A14"/>
+    </radialGradient>
+    <clipPath id="curClipCorpo">
+      <path d="M31 70 C 40 63, 64 60.5, 86 63 L86 89 C 64 91.5, 40 89, 31 82 C 28.5 79, 28.5 73, 31 70 Z"/>
+    </clipPath>
+    <clipPath id="curClipTronco"><ellipse cx="52" cy="55" rx="12.5" ry="14"/></clipPath>
+    <clipPath id="curClipBoca"><path d="M50.4 35 Q54 40.8 57.6 35 Z"/></clipPath>
+  </defs>
+
+  <g class="cur-flutua">
+
+    <!-- ===== CHAMA ===== -->
+    <g class="cur-chama">
+      <!-- línguas de fogo externas -->
+      <path d="M32 64.5 C 24 67, 17 69.5, 11 72 C 15 73, 13 74.5, 6 76.5 C 12 77.5, 9 79, 1 81.5 C 9 82, 7 83.5, 4 86 C 12 86.5, 14 88, 11 90.5 C 18 92.5, 25 94, 32 94.5 C 27.5 85, 27.5 73.5, 32 64.5 Z" fill="url(#curFogo)"/>
+      <path d="M32 69 C 26 71, 21 73, 16 75 C 19 75.8, 17 77, 12 78.5 C 17 79.2, 15 80.4, 10 82 C 16 82.5, 14.5 84, 12 86 C 18 87.5, 25 89, 32 89.5 C 29 83, 29 75.5, 32 69 Z" fill="#FFB320"/>
+      <path d="M32 73.5 C 28 74.8, 25 76, 22 77.4 C 24 77.9, 22.5 78.7, 19.5 79.6 C 23 80.1, 21.5 81, 19 82 C 23 82.4, 22 83.4, 20.5 84.6 C 25 85.5, 29 86, 32 86.2 C 30 82.5, 30 77, 32 73.5 Z" fill="#FFE97A"/>
+      <!-- brilho branco no bocal -->
+      <ellipse cx="32" cy="77.5" rx="5" ry="6.6" fill="url(#curBrilhoBocal)" opacity=".7"/>
+    </g>
+
+    <!-- ===== ALETAS ROXAS (barbatana curva, saindo por trás do corpo) ===== -->
+    <path d="M46 67 C 40 57, 32 48, 22.5 42.5 C 25 53, 32 62, 40 69 Z" fill="#8B3FD9"/>
+    <path d="M44 66 C 39.5 58, 33 51, 26 45.5 C 28.5 53.5, 34 60, 40 65.5 Z" fill="#A05CE8" opacity=".5"/>
+    <path d="M50 88 C 44 94, 36 98.5, 27 101.5 C 37 99.5, 46 95, 53 89.5 Z" fill="#6F26B8"/>
+
+    <!-- ===== CORPO DA NAVE (formato de bala: traseira estreita, alarga para a frente) ===== -->
+    <path d="M31 70 C 40 63, 64 60.5, 86 63 L86 89 C 64 91.5, 40 89, 31 82 C 28.5 79, 28.5 73, 31 70 Z" fill="url(#curCorpo)"/>
+    <g clip-path="url(#curClipCorpo)">
+      <path d="M33 68.4 C 43 63.6, 64 61.4, 88 63.8 L88 68 C 64 65.8, 43 68, 33 72 Z" fill="#FFFFFF" opacity=".9"/>
+      <rect x="33.5" y="58" width="7" height="36" fill="#22222E"/>
+      <rect x="33.5" y="58" width="2.2" height="36" fill="#3E3E52"/>
+      <rect x="41.5" y="58" width="10.5" height="36" fill="#FFC814"/>
+      <rect x="41.5" y="58" width="10.5" height="4.5" fill="#FFDD6B" opacity=".75"/>
+      <path d="M33 86 C 46 90.5, 66 91.5, 88 90.6 L88 95 L33 95 Z" fill="#AEBBCF" opacity=".45"/>
+    </g>
+
+    <!-- bocal branco arredondado -->
+    <path d="M31 70 C 34.5 73, 34.5 79, 31 82 C 28.5 79, 28.5 73, 31 70 Z" fill="#E6EBF3"/>
+
+    <!-- bico rosa -->
+    <path d="M86 63 C 98 65.2, 109 70, 114.5 76 C 109 82, 98 86.8, 86 89 Z" fill="url(#curBico)"/>
+    <path d="M87 65.2 C 97 67.2, 106 71, 111.5 75.5 C 103 72, 95 69.6, 87 68.2 Z" fill="#FFAAE8" opacity=".65"/>
+
+    <!-- escotilha -->
+    <circle cx="76" cy="76" r="9.6" fill="#FFC814"/>
+    <circle cx="76" cy="76" r="9.6" fill="none" stroke="#D69E00" stroke-width="1.2"/>
+    <circle cx="76" cy="76" r="6.8" fill="#0B0A14"/>
+    <circle cx="73.4" cy="73" r="2.6" fill="#FFFFFF" opacity=".95"/>
+    <circle cx="78.6" cy="79.2" r="1.2" fill="#FFFFFF" opacity=".45"/>
+
+    <!-- ===== PERNINHA BALANÇANDO =====
+         Só uma aparece: a outra está do lado oposto da nave. -->
+    <g class="cur-perna">
+      <ellipse cx="55.2" cy="66.4" rx="7.2" ry="4.6" fill="#7B2FBE"/>
+      <path d="M55 67.5 Q58.4 75 57.2 82.5" stroke="#4F8A24" stroke-width="12.6" stroke-linecap="round" fill="none"/>
+      <path d="M55 67.5 Q58.4 75 57.2 82.5" stroke="#8CC63F" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <path d="M52.4 69 Q55 75.6 54.4 81" stroke="#A8DB63" stroke-width="2.8" stroke-linecap="round" fill="none" opacity=".7"/>
+      <rect x="49.8" y="79.6" width="14.6" height="4.6" rx="2.3" fill="#FFFFFF" stroke="#D6DEEA" stroke-width=".8"/>
+      <path d="M50.2 84 h13.4 v5.8 q0 1.5 1.5 1.8 l4.2 .8 q2.6 .5 2.6 2.7 v.9 q0 1.8 -1.8 1.8 h-19.9 q-1.8 0 -1.8 -1.8 v-10.2 q0 -1.8 1.8 -1.8 Z" fill="#FFC814" stroke="#FFFFFF" stroke-width="2.2"/>
+      <path d="M50.2 92.4 h21.6 v1.6 q0 1.8 -1.8 1.8 h-19.9 q-1.8 0 -1.8 -1.8 Z" fill="#E0A400"/>
+      <path d="M52.4 86.4 h9" stroke="#FFDD6B" stroke-width="1.7" stroke-linecap="round"/>
+    </g>
+
+    <!-- ===== MOCHILA ===== -->
+    <rect x="35.4" y="43.5" width="9.4" height="17.5" rx="4.7" fill="#EDF1F8" stroke="#CBD4E1" stroke-width=".9"/>
+    <circle cx="40.1" cy="52" r="2.5" fill="#8B3FD9"/>
+
+    <!-- ===== TRONCO =====
+         Descido para o painel do peito não ficar
+         escondido atrás do capacete. -->
+    <ellipse cx="52" cy="55" rx="12.5" ry="14" fill="#FFFFFF"/>
+    <g clip-path="url(#curClipTronco)">
+      <rect x="38" y="39" width="6.4" height="34" fill="#E6EBF3"/>
+      <rect x="38" y="63.4" width="30" height="5.6" fill="#8B3FD9"/>
+    </g>
+    <ellipse cx="52" cy="55" rx="12.5" ry="14" fill="none" stroke="#DCE3EF" stroke-width="1"/>
+    <rect x="45" y="52.4" width="14.2" height="9.8" rx="3.2" fill="#7B2FBE"/>
+    <circle cx="49.2" cy="56" r="1.8" fill="#FF3EA5"/>
+    <circle cx="54.6" cy="56" r="1.8" fill="#38C6F4"/>
+    <rect x="47.4" y="59" width="9.4" height="2.3" rx="1.15" fill="#FFC814"/>
+
+    <!-- ===== BRAÇO DE TRÁS ACENANDO ===== -->
+    <g class="cur-acena-tras">
+      <path d="M41 48.6 Q31 42.5, 26.6 31" stroke="#4F8A24" stroke-width="10.4" stroke-linecap="round" fill="none"/>
+      <path d="M41 48.6 Q31 42.5, 26.6 31" stroke="#8CC63F" stroke-width="8.2" stroke-linecap="round" fill="none"/>
+      <path d="M39.6 45.6 Q31.4 40.4, 27.6 31.4" stroke="#A8DB63" stroke-width="2.4" stroke-linecap="round" fill="none" opacity=".65"/>
+      <ellipse cx="41.8" cy="48.4" rx="5.8" ry="4.2" fill="#7B2FBE" transform="rotate(-32 41.8 48.4)"/>
+      <ellipse cx="26.2" cy="29.4" rx="5.6" ry="3.8" fill="#7B2FBE" transform="rotate(-66 26.2 29.4)"/>
+      <!-- mão aberta acenando -->
+      <g transform="translate(23.4,21)">
+        <path d="M-6.6 0 l-3.6 -7.4" stroke="#4F8A24" stroke-width="5.6" stroke-linecap="round" fill="none"/>
+        <path d="M-2.4 -2.4 l-1.8 -9.2" stroke="#4F8A24" stroke-width="5.6" stroke-linecap="round" fill="none"/>
+        <path d="M2.2 -2.6 l1.2 -9" stroke="#4F8A24" stroke-width="5.6" stroke-linecap="round" fill="none"/>
+        <path d="M6 -.4 l4.8 -6.4" stroke="#4F8A24" stroke-width="5.6" stroke-linecap="round" fill="none"/>
+        <path d="M-6.6 0 l-3.6 -7.4" stroke="#8CC63F" stroke-width="4.2" stroke-linecap="round" fill="none"/>
+        <path d="M-2.4 -2.4 l-1.8 -9.2" stroke="#8CC63F" stroke-width="4.2" stroke-linecap="round" fill="none"/>
+        <path d="M2.2 -2.6 l1.2 -9" stroke="#8CC63F" stroke-width="4.2" stroke-linecap="round" fill="none"/>
+        <path d="M6 -.4 l4.8 -6.4" stroke="#8CC63F" stroke-width="4.2" stroke-linecap="round" fill="none"/>
+        <ellipse cx="0" cy="2" rx="7.6" ry="7" fill="#4F8A24"/>
+        <ellipse cx="0" cy="1.6" rx="6.6" ry="6.2" fill="#8CC63F"/>
+        <ellipse cx="-1.6" cy=".6" rx="4" ry="3.4" fill="#A8DB63" opacity=".65"/>
+      </g>
+    </g>
+
+    <!-- ===== BRAÇO DO "V" =====
+         Fica ANTES do capacete: o ombro some atrás dele e só
+         o antebraço e a mão aparecem, como na referência. -->
+    <g class="cur-acena">
+      <path d="M63 48.6 Q74 42, 79.6 28.6" stroke="#4F8A24" stroke-width="10.4" stroke-linecap="round" fill="none"/>
+      <path d="M63 48.6 Q74 42, 79.6 28.6" stroke="#8CC63F" stroke-width="8.2" stroke-linecap="round" fill="none"/>
+      <path d="M64.4 45.6 Q73.4 40, 78.4 29" stroke="#A8DB63" stroke-width="2.4" stroke-linecap="round" fill="none" opacity=".65"/>
+      <ellipse cx="62.2" cy="48.4" rx="5.8" ry="4.2" fill="#7B2FBE" transform="rotate(32 62.2 48.4)"/>
+      <ellipse cx="80.2" cy="27" rx="5.6" ry="3.8" fill="#7B2FBE" transform="rotate(62 80.2 27)"/>
+      <!-- mão fazendo o V -->
+      <g transform="translate(83,19)">
+        <path d="M-1.8 -3.4 l-3 -9.4" stroke="#4F8A24" stroke-width="5.8" stroke-linecap="round" fill="none"/>
+        <path d="M3.2 -3.2 l3.8 -8.8" stroke="#4F8A24" stroke-width="5.8" stroke-linecap="round" fill="none"/>
+        <path d="M-1.8 -3.4 l-3 -9.4" stroke="#8CC63F" stroke-width="4.4" stroke-linecap="round" fill="none"/>
+        <path d="M3.2 -3.2 l3.8 -8.8" stroke="#8CC63F" stroke-width="4.4" stroke-linecap="round" fill="none"/>
+        <ellipse cx="0" cy="2" rx="7.4" ry="6.8" fill="#4F8A24"/>
+        <ellipse cx="0" cy="1.6" rx="6.4" ry="6" fill="#8CC63F"/>
+        <path d="M-3.8 3.4 q3.8 2 7.6 0" stroke="#5F9E2E" stroke-width="1.3" stroke-linecap="round" fill="none" opacity=".8"/>
+        <ellipse cx="1.6" cy=".6" rx="3.8" ry="3.2" fill="#A8DB63" opacity=".6"/>
+      </g>
+    </g>
+
+    <!-- ===== ANTENINHAS (saem por trás do capacete) ===== -->
+    <g class="cur-antena">
+      <path d="M46 22 Q42 11 39.6 6.4" stroke="#6FAF35" stroke-width="2.9" stroke-linecap="round" fill="none"/>
+      <circle cx="38.6" cy="4.8" r="4.3" fill="#FF3EA5"/>
+      <circle cx="37.1" cy="3.3" r="1.5" fill="#FFFFFF" opacity=".85"/>
+      <path d="M62 22 Q66 11 68.4 6.4" stroke="#6FAF35" stroke-width="2.9" stroke-linecap="round" fill="none"/>
+      <circle cx="69.4" cy="4.8" r="4.3" fill="#38C6F4"/>
+      <circle cx="67.9" cy="3.3" r="1.5" fill="#FFFFFF" opacity=".85"/>
+    </g>
+
+    <!-- ===== GOLA ===== -->
+    <rect x="43.6" y="46.6" width="20.8" height="6.6" rx="3.3" fill="#8B3FD9"/>
+
+    <!-- ===== CAPACETE ===== -->
+    <circle cx="54" cy="30" r="21" fill="#FFFFFF"/>
+    <circle cx="54" cy="30" r="21" fill="none" stroke="#DCE3EF" stroke-width="1.2"/>
+    <ellipse cx="33.4" cy="31" rx="4.2" ry="5.6" fill="#FFC814"/>
+    <ellipse cx="33.4" cy="31" rx="4.2" ry="5.6" fill="none" stroke="#D69E00" stroke-width=".9"/>
+    <ellipse cx="74.6" cy="31" rx="4.2" ry="5.6" fill="#FFC814"/>
+    <ellipse cx="74.6" cy="31" rx="4.2" ry="5.6" fill="none" stroke="#D69E00" stroke-width=".9"/>
+    <circle cx="54" cy="30" r="17.2" fill="url(#curVisor)"/>
+
+    <!-- cabeça de alienígena -->
+    <path d="M54 15.4 C 66.4 15.4, 69.6 26.8, 63.8 36 C 60.2 41.6, 47.8 41.6, 44.2 36 C 38.4 26.8, 41.6 15.4, 54 15.4 Z" fill="#8CC63F"/>
+    <path d="M54 15.4 C 64.4 15.4, 68 23.4, 65.4 29.2 C 63.2 21.8, 59 17.6, 54 17.6 Z" fill="#AEDD68" opacity=".75"/>
+    <ellipse cx="47.8" cy="27.6" rx="4.7" ry="6.4" fill="#0A0A0A" transform="rotate(-17 47.8 27.6)"/>
+    <ellipse cx="60.2" cy="27.6" rx="4.7" ry="6.4" fill="#0A0A0A" transform="rotate(17 60.2 27.6)"/>
+    <circle cx="46.1" cy="24.6" r="2" fill="#FFFFFF"/>
+    <circle cx="58.5" cy="24.6" r="2" fill="#FFFFFF"/>
+    <circle cx="49.6" cy="30.2" r="1" fill="#FFFFFF" opacity=".75"/>
+    <circle cx="62" cy="30.2" r="1" fill="#FFFFFF" opacity=".75"/>
+    <ellipse cx="43.4" cy="33.2" rx="2.9" ry="1.9" fill="#FF8FB8" opacity=".45"/>
+    <ellipse cx="64.6" cy="33.2" rx="2.9" ry="1.9" fill="#FF8FB8" opacity=".45"/>
+    <path d="M50.4 35 Q54 40.8 57.6 35 Z" fill="#B01030"/>
+    <g clip-path="url(#curClipBoca)">
+      <ellipse cx="54" cy="39" rx="2.4" ry="1.8" fill="#FF4D6D"/>
+    </g>
+
+    <!-- reflexo do vidro -->
+    <path d="M41.4 19.6 Q47 13.4, 54.4 12.2" stroke="#FFFFFF" stroke-width="3.6" stroke-linecap="round" fill="none" opacity=".4"/>
+    <path d="M38.4 25.4 q-1 3 -.4 6" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".28"/>
+    <circle cx="54" cy="30" r="17.2" fill="none" stroke="#3A3550" stroke-width="1.1"/>
+
+  </g>
+</svg>
+</div>
+
+<div class="page">
+
+<div class="topbar">⚡ Turma de setembro · Lote promocional com vagas limitadas</div>
+
+<!-- ══════════════ 1. HERO ══════════════ -->
+<header class="hero">
+  <div class="wrap">
+
+    <!-- ▼ LOGO
+         Com o arquivo pronto, troque por:
+         <div class="logo-img"><img src="assets/logo.png" alt="Multiverso dos Criativos"></div> -->
+    <div class="logo-txt">
+      <i>Imersão</i>
+      <b class="grad-ouro">Multiverso dos Criativos</b>
+    </div>
+
+    <!-- ▼ CAPA DO EVENTO
+         Salve a arte horizontal como assets/capa-multiverso.jpg -->
+    <div class="capa">
+      <img src="assets/capa-multiverso.jpg"
+           alt="Imersão Multiverso dos Criativos: Canva e edição de vídeo com IA"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="capa-ph" style="display:none">
+        <b>CAPA DA IMERSÃO</b>
+        <small>Salve a arte horizontal em<br><code>assets/capa-multiverso.jpg</code><br>1656 × 943px</small>
+      </div>
+    </div>
+
+    <div class="tag-linha">
+      <span class="tag">Ao vivo pelo Zoom</span>
+      <span class="tag neon">2 dias · Sáb e Dom</span>
+      <span class="tag">Do zero ao avançado</span>
+    </div>
+
+    <!-- ABERTURA PELA DOR -->
+    <p class="hook">
+      Enquanto alguns criadores publicam <b>10 vezes mais conteúdo</b> usando Inteligência Artificial,
+      outros ainda gastam <b>3 horas para montar um único post</b>.
+      <span>Em qual desses dois grupos você está hoje?</span>
+    </p>
+
+    <h1>
+      Dois dias para você produzir<br>
+      <span class="grad-ouro">como um estúdio inteiro</span>.<br>
+      <span class="grad-neon">Sozinho</span>, do seu computador.
+    </h1>
+
+    <p class="hero-sub">
+      A Imersão Multiverso dos Criativos te entrega o método que une
+      <b>Canva + Inteligência Artificial + Edição de Vídeo</b> para transformar ideias em posts,
+      carrosséis, criativos e vídeos profissionais em minutos.
+      Mesmo que hoje você trave, não seja designer e nunca tenha usado IA.
+    </p>
+
+    <div class="data-strip">
+      <span class="data-item">📅 <b>19 e 20 de setembro</b></span>
+      <span class="data-sep"></span>
+      <span class="data-item">Sábado e domingo</span>
+      <span class="data-sep"></span>
+      <span class="data-item">🕗 <b>19h às 22h</b> (Brasília)</span>
+    </div>
+
+    <div class="preco-box">
+      <div class="preco-label">Investimento único</div>
+      <div class="preco grad-ouro"><small>R$</small>19,90</div>
+      <div class="preco-nota">2 dias ao vivo · Pix, cartão ou boleto</div>
+    </div>
+
+    <p class="count-titulo">As inscrições encerram em</p>
+    <div class="count">
+      <div class="count-item"><div class="count-n" data-d>00</div><div class="count-l">Dias</div></div>
+      <div class="count-item"><div class="count-n" data-h>00</div><div class="count-l">Horas</div></div>
+      <div class="count-item"><div class="count-n" data-m>00</div><div class="count-l">Min</div></div>
+      <div class="count-item"><div class="count-n" data-s>00</div><div class="count-l">Seg</div></div>
+    </div>
+
+    <div class="vagas">
+      <div class="vagas-topo"><span>Vagas do lote promocional</span><b id="vagas-txt">78% preenchidas</b></div>
+      <div class="barra"><span id="vagas-barra" style="width:78%"></span></div>
+    </div>
+
+    <div class="cta-bloco">
+      <a class="cta" href="#oferta" data-cta>🚀 Quero garantir minha vaga</a>
+      <p class="cta-nota">Acesso imediato ao grupo de alunos · Garantia de 7 dias</p>
+    </div>
+
+    <div class="prova-linha">
+      <span class="estrelas">★★★★★</span>
+      <span><b>[X] alunos</b> já passaram pelas turmas anteriores</span>
+      <span>·</span>
+      <span>Nota média <b>[X,X]</b></span>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════ 2. OS DOIS GRUPOS ══════════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">A linha que divide o mercado</div>
+      <div class="divisor"></div>
+      <h2>Não é sobre talento.<br><span class="grad-neon">É sobre velocidade.</span></h2>
+      <p class="lead">O mercado se dividiu em dois. E a diferença entre eles não é criatividade. É método.</p>
+    </div>
+
+    <div class="grupos mt-l rv">
+      <div class="grupo grupo-a">
+        <div class="grupo-tit">Grupo 1 · ficando para trás</div>
+        <ul>
+          <li>Passa horas para montar um único post</li>
+          <li>Olha a tela em branco sem saber o que publicar</li>
+          <li>Tem Canva, mas usa 10% do que ele faz</li>
+          <li>Some do feed quando a rotina aperta</li>
+          <li>Vê o conteúdo do concorrente e sente que está atrasado</li>
+          <li>Adia editar vídeos porque dá trabalho demais</li>
+        </ul>
+        <p class="grupo-fim">Trabalha muito, aparece pouco.</p>
+      </div>
+
+      <div class="grupo grupo-b">
+        <div class="grupo-tit">Grupo 2 · produzindo com IA</div>
+        <ul>
+          <li>Sai de uma ideia solta para um carrossel pronto em minutos</li>
+          <li>Tem um banco de ideias que nunca acaba</li>
+          <li>Usa a IA dentro do Canva como uma equipe de design</li>
+          <li>Publica com constância, mesmo na semana corrida</li>
+          <li>Entrega material que parece feito por agência</li>
+          <li>Edita vídeo com IA em uma fração do tempo</li>
+        </ul>
+        <p class="grupo-fim">Produz mais, aparece mais, cobra mais.</p>
+      </div>
+    </div>
+
+    <div class="cta-bloco rv">
+      <a class="cta" href="#oferta" data-cta>🔥 Quero entrar para o grupo 2</a>
+      <p class="cta-nota">R$ 19,90 · 2 dias ao vivo · Vagas limitadas</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 3. DORES ══════════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Sinceridade em 30 segundos</div>
+      <div class="divisor"></div>
+      <h2>Quantas dessas frases<br>já passaram pela sua cabeça?</h2>
+    </div>
+
+    <div class="dores mt-l rv">
+      <div class="dor"><i>✕</i>“Eu queria postar todo dia, mas não dá tempo.”</div>
+      <div class="dor"><i>✕</i>“Demoro horas para criar um post e nem fico satisfeito.”</div>
+      <div class="dor"><i>✕</i>“Nunca sei o que publicar.”</div>
+      <div class="dor"><i>✕</i>“Tenho Canva, mas uso só o básico.”</div>
+      <div class="dor"><i>✕</i>“A IA anda rápido demais, não consigo acompanhar.”</div>
+      <div class="dor"><i>✕</i>“Meu concorrente produz muito mais do que eu.”</div>
+      <div class="dor"><i>✕</i>“Perco a tarde inteira editando um vídeo.”</div>
+      <div class="dor"><i>✕</i>“Minha criatividade trava na hora de começar.”</div>
+      <div class="dor"><i>✕</i>“Não tenho equipe, designer nem editor.”</div>
+      <div class="dor"><i>✕</i>“Não tenho orçamento para contratar agência.”</div>
+      <div class="dor"><i>✕</i>“Meu conteúdo ainda parece amador.”</div>
+      <div class="dor"><i>✕</i>“Tenho medo de ficar ultrapassado.”</div>
+    </div>
+
+    <p class="lead mt-l rv">
+      Se você marcou <b style="color:var(--dourado-2)">3 ou mais</b>, o problema não é você.
+      É o processo que ninguém te ensinou.
+      <br><br><b style="color:var(--txt)">É exatamente isso que a imersão resolve em 2 dias.</b>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════ 4. OS 4 PORTAIS ══════════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">O caminho que você vai percorrer</div>
+      <div class="divisor"></div>
+      <h2>Os <span class="grad-ouro">4 Portais</span> do Multiverso</h2>
+      <p class="lead">Um fluxo simples e repetível. Você vai executar ao vivo, junto comigo, nos dois dias.</p>
+    </div>
+
+    <div class="portais mt-l rv">
+      <div class="portal">
+        <h3>Ideia</h3>
+        <p>Nunca mais encarar a tela em branco. Você sai com um sistema de ideias que se abastece sozinho.</p>
+      </div>
+      <div class="portal">
+        <h3>Comando</h3>
+        <p>Aprenda a conversar com a IA do jeito certo. Prompt bom é a diferença entre lixo e material profissional.</p>
+      </div>
+      <div class="portal">
+        <h3>Design</h3>
+        <p>Canva com IA na prática: posts, carrosséis, apresentações e criativos com cara de agência.</p>
+      </div>
+      <div class="portal">
+        <h3>Vídeo</h3>
+        <p>Edição com IA: cortes, legendas, ritmo e finalização em uma fração do tempo que você leva hoje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 5. PROGRAMA ══════════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Programa completo</div>
+      <div class="divisor"></div>
+      <h2>Dois dias. Duas transformações.</h2>
+      <p class="lead">Aulas ao vivo, com execução na tela. Você não assiste: você faz junto.</p>
+    </div>
+
+    <div class="dias mt-l rv">
+      <!-- ▼▼▼ TROCAR AS DATAS AQUI ▼▼▼ -->
+      <article class="dia dia-1">
+        <div class="dia-num">Dia 01 · Sábado</div>
+        <h3>Canva com Inteligência Artificial</h3>
+        <div class="dia-data">19 de setembro · 19h às 22h</div>
+        <p class="dia-desc">Design que comunica. Você sai criando peças profissionais sem ser designer.</p>
+        <ul class="tl">
+          <li><b>O Canva que 90% das pessoas nunca abriu</b><span>Os recursos de IA que mudam completamente a sua velocidade.</span></li>
+          <li><b>Da ideia ao post em minutos</b><span>O fluxo prático para transformar um pensamento solto em peça pronta.</span></li>
+          <li><b>Carrosséis que seguram a atenção</b><span>Estrutura, hierarquia e o padrão visual que faz o dedo parar.</span></li>
+          <li><b>Criativos e anúncios</b><span>Peças pensadas para converter, não só para ficarem bonitas.</span></li>
+          <li><b>Identidade visual em minutos</b><span>Paleta, tipografia e templates para nunca mais começar do zero.</span></li>
+          <li><b>Execução ao vivo</b><span>Criamos juntos, na tela, com espaço para tirar dúvidas.</span></li>
+        </ul>
+      </article>
+
+      <article class="dia dia-2">
+        <div class="dia-num">Dia 02 · Domingo</div>
+        <h3>Edição de Vídeo com IA</h3>
+        <div class="dia-data">20 de setembro · 19h às 22h</div>
+        <p class="dia-desc">Conteúdo que converte. Vídeo deixa de ser o gargalo da sua produção.</p>
+        <ul class="tl">
+          <li><b>Roteiro em minutos com IA</b><span>Ganchos, desenvolvimento e chamada, no formato que retém.</span></li>
+          <li><b>Edição assistida por IA</b><span>Cortes, ritmo e limpeza sem passar a tarde na timeline.</span></li>
+          <li><b>Legendas e finalização</b><span>O acabamento que separa o amador do profissional.</span></li>
+          <li><b>Reels, Shorts e TikTok</b><span>Adaptar um vídeo para todos os formatos sem retrabalho.</span></li>
+          <li><b>Vídeo para vender</b><span>VSL curta, anúncio e vídeo de oferta usando IA.</span></li>
+          <li><b>Seu fluxo de produção semanal</b><span>Como organizar tudo para publicar com constância.</span></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="cta-bloco rv">
+      <a class="cta" href="#oferta" data-cta>🚀 Quero garantir minha vaga</a>
+      <p class="cta-nota">Você recebe o link do Zoom assim que a compra é aprovada</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 6. ENTREGÁVEIS ══════════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Resultado prático</div>
+      <div class="divisor"></div>
+      <h2>O que você vai <span class="grad-ouro">sair criando</span></h2>
+      <p class="lead">Não é teoria. É repertório de execução que você usa na segunda-feira.</p>
+    </div>
+
+    <div class="entregas mt-l rv">
+      <div class="entrega"><i>📱</i><b>Posts</b></div>
+      <div class="entrega"><i>🎠</i><b>Carrosséis</b></div>
+      <div class="entrega"><i>📊</i><b>Apresentações</b></div>
+      <div class="entrega"><i>🎯</i><b>Criativos</b></div>
+      <div class="entrega"><i>🎬</i><b>Vídeos</b></div>
+      <div class="entrega"><i>📣</i><b>Anúncios</b></div>
+      <div class="entrega"><i>💼</i><b>Material para empresas</b></div>
+      <div class="entrega"><i>🧩</i><b>Templates próprios</b></div>
+      <div class="entrega"><i>⚡</i><b>Conteúdo em série</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 7. PROVAS ══════════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Quem já passou por aqui</div>
+      <div class="divisor"></div>
+      <h2>Resultados de quem aplicou</h2>
+    </div>
+
+    <!--
+      ⚠️ SUBSTITUA por depoimentos REAIS (print de WhatsApp/DM converte ainda mais).
+      Se ainda não tiver, remova a seção inteira. Prova falsa destrói confiança e é ilegal (CDC art. 37).
+    -->
+    <div class="depos mt-l rv">
+      <div class="depo">
+        <div class="estrelas">★★★★★</div>
+        <p>“[DEPOIMENTO REAL. Foque no antes e depois: quanto tempo levava antes e quanto leva agora.]”</p>
+        <div class="depo-autor"><div class="avatar">A</div><b>[Nome]</b><small>[Profissão / @perfil]</small></div>
+      </div>
+      <div class="depo">
+        <div class="estrelas">★★★★★</div>
+        <p>“[DEPOIMENTO REAL de alguém que se dizia iniciante ou ‘sem criatividade’. Quebra objeção.]”</p>
+        <div class="depo-autor"><div class="avatar">B</div><b>[Nome]</b><small>[Profissão / @perfil]</small></div>
+      </div>
+      <div class="depo">
+        <div class="estrelas">★★★★★</div>
+        <p>“[DEPOIMENTO REAL de quem gerou resultado comercial: cliente novo, venda, contrato.]”</p>
+        <div class="depo-autor"><div class="avatar">C</div><b>[Nome]</b><small>[Profissão / @perfil]</small></div>
+      </div>
+    </div>
+
+    <div class="antes-depois rv">
+      <div class="ad ad-antes">
+        <div class="ad-img">[IMAGEM: peça feita ANTES da imersão]<br>1200 × 750px</div>
+        <div class="ad-tag">Antes · 2h30 de trabalho</div>
+      </div>
+      <div class="ad ad-depois">
+        <div class="ad-img">[IMAGEM: mesma peça feita DEPOIS, com Canva + IA]<br>1200 × 750px</div>
+        <div class="ad-tag">Depois · 11 minutos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 8. PARA QUEM É ══════════════ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Honestidade antes da compra</div>
+      <div class="divisor"></div>
+      <h2>Isso é para você?</h2>
+    </div>
+
+    <div class="grupos mt-l rv">
+      <div class="grupo grupo-b">
+        <div class="grupo-tit">Feito para você se…</div>
+        <ul>
+          <li>Precisa produzir conteúdo com constância e não tem equipe</li>
+          <li>É empreendedor, social media, designer, freelancer, infoprodutor ou afiliado</li>
+          <li>Quer usar IA de verdade no dia a dia, não só brincar com ela</li>
+          <li>Está começando do zero e quer um caminho claro</li>
+          <li>Já usa Canva, mas sente que só arranha a superfície</li>
+          <li>Quer entregar mais para clientes sem trabalhar mais horas</li>
+        </ul>
+      </div>
+
+      <div class="grupo grupo-a">
+        <div class="grupo-tit">Não é para você se…</div>
+        <ul>
+          <li>Procura fórmula mágica de dinheiro rápido sem executar nada</li>
+          <li>Não pretende reservar as duas noites para participar ao vivo</li>
+          <li>Espera que a IA faça 100% do trabalho no seu lugar</li>
+          <li>Quer um curso teórico e longo, sem mão na massa</li>
+          <li>Não tem nenhuma intenção de produzir conteúdo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 9. OFERTA ══════════════ -->
+<section class="sec" id="oferta">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">A oferta</div>
+      <div class="divisor"></div>
+      <h2>Tudo isso por menos<br>que <span class="grad-ouro">um lanche</span></h2>
+      <p class="lead">Uma única arte feita por freelancer custa de R$ 80 a R$ 200. Dois dias de imersão ao vivo custam R$ 19,90.</p>
+    </div>
+
+    <div class="oferta mt-l rv">
+      <ul class="stack">
+        <li><span><b style="color:var(--txt)">Dia 1 ao vivo</b>: Canva com Inteligência Artificial (3h)</span><b>R$ 297</b></li>
+        <li><span><b style="color:var(--txt)">Dia 2 ao vivo</b>: Edição de Vídeo com IA (3h)</span><b>R$ 297</b></li>
+        <li><span><b style="color:var(--txt)">Sessão de perguntas</b> ao vivo nos dois dias</span><b>R$ 147</b></li>
+        <li><span><b style="color:var(--txt)">Grupo exclusivo</b> de alunos durante a imersão</span><b>R$ 97</b></li>
+        <li><span><b style="color:var(--txt)">Lista de prompts</b> usados nas aulas</span><b>R$ 67</b></li>
+      </ul>
+
+      <div class="stack-total"><span>Valor real do que você recebe</span><b>R$ 905</b></div>
+
+      <div class="preco-final">
+        <div class="preco-label">Sua inscrição hoje</div>
+        <div class="preco"><small>R$</small>19,90</div>
+        <div class="preco-nota">Pagamento único · Pix, cartão ou boleto</div>
+      </div>
+
+      <a class="cta" href="https://CHECKOUT.com.br/multiverso" data-cta>🚀 Quero garantir minha vaga</a>
+      <p class="cta-nota">Compra 100% segura · Confirmação imediata · Garantia de 7 dias</p>
+
+      <div class="bump-nota">
+        <b>Aviso:</b> a imersão é ao vivo e não fica disponível depois.
+        No checkout você poderá, se quiser, adicionar o <b>Passe Premium</b>, que inclui as gravações
+        por 3 meses. É totalmente opcional e fica a seu critério.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 10. GARANTIA ══════════════ -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap rv">
+    <div class="garantia">
+      <div class="selo"><b>7</b><small>Dias</small></div>
+      <h3 style="margin-bottom:14px">O risco é todo meu.</h3>
+      <p>
+        Participe do primeiro dia. Se você achar que a imersão não é para você, por qualquer motivo,
+        é só mandar uma mensagem em até <b style="color:var(--txt)">7 dias</b> e devolvemos os R$ 19,90 integralmente.
+        Sem formulário, sem justificativa, sem constrangimento.
+      </p>
+      <p style="color:var(--txt-3);font-size:14px;margin-top:16px">
+        Você tem duas noites para descobrir se isso muda sua produção. Se não mudar, não paga nada.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 11. FAQ ══════════════ -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Antes de decidir</div>
+      <div class="divisor"></div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+
+    <div class="faq mt-l rv">
+      <details open>
+        <summary>Nunca usei Canva. Consigo acompanhar?</summary>
+        <p>Sim. A imersão começa do zero absoluto. No primeiro dia você aprende a estrutura do Canva antes de qualquer coisa avançada. Vários alunos abriram a ferramenta pela primeira vez na aula e saíram com peças prontas.</p>
+      </details>
+      <details>
+        <summary>Nunca usei Inteligência Artificial. É complicado?</summary>
+        <p>Não. Você não precisa entender nada de tecnologia. Vou te mostrar exatamente onde clicar e o que escrever. Se você sabe mandar mensagem no WhatsApp, você consegue usar IA do jeito que ensino.</p>
+      </details>
+      <details>
+        <summary>Não sou designer e acho que não tenho criatividade.</summary>
+        <p>Perfeito. A imersão foi desenhada para você. O objetivo não é te transformar em designer, é te dar um processo. Criatividade travada quase sempre é falta de método, não falta de dom.</p>
+      </details>
+      <details>
+        <summary>Não tenho tempo. Vou conseguir participar?</summary>
+        <p>São duas noites, 19 e 20 de setembro, sábado e domingo, das 19h às 22h. Fora isso, não há lição de casa obrigatória. E a proposta da imersão é justamente te devolver tempo: o que você aprende encurta horas de produção toda semana.</p>
+      </details>
+      <details>
+        <summary>Sou iniciante total. Vale a pena?</summary>
+        <p>É onde o retorno é maior. Quem começa já com o método certo pula meses de tentativa e erro.</p>
+      </details>
+      <details>
+        <summary>A imersão fica gravada?</summary>
+        <p>A imersão é ao vivo e o acesso ao vivo não fica disponível depois. No momento do checkout você pode, se quiser, adicionar o Passe Premium, que dá acesso às gravações por 3 meses. É opcional.</p>
+      </details>
+      <details>
+        <summary>Preciso de computador ou dá pelo celular?</summary>
+        <p>Dá para assistir pelo celular, mas recomendo fortemente um computador ou notebook para executar junto. A prática ao vivo é a parte que mais gera resultado.</p>
+      </details>
+      <details>
+        <summary>Preciso pagar Canva Pro ou ferramentas de IA?</summary>
+        <p>Não. Tudo que ensino tem caminho gratuito. Quando existir uma versão paga que vale a pena, eu aponto, mas sem obrigação nenhuma.</p>
+      </details>
+      <details>
+        <summary>Como recebo o acesso?</summary>
+        <p>Assim que o pagamento é aprovado, você recebe um e-mail com o link do Zoom e o convite para o grupo exclusivo de alunos. Leva menos de 5 minutos no Pix ou no cartão.</p>
+      </details>
+      <details>
+        <summary>E se eu não gostar?</summary>
+        <p>Você tem 7 dias de garantia incondicional. Mandou mensagem, devolvemos o valor integral. Sem perguntas.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ 12. CTA FINAL ══════════════ -->
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow rv">Última chamada</div>
+    <div class="divisor rv"></div>
+    <h2 class="rv">Daqui a 30 dias você vai ter<br><span class="grad-ouro">produzido</span> ou vai ter <span style="color:#FF7A7A">adiado</span>.</h2>
+    <p class="lead mt rv">
+      A ferramenta não vai esperar você. Os criadores que já usam IA estão publicando enquanto você lê isso.
+      Dois dias e R$ 19,90 separam você deles.
+    </p>
+    <div class="cta-bloco rv">
+      <a class="cta" href="https://CHECKOUT.com.br/multiverso" data-cta>🔥 Entrar para a Imersão</a>
+      <p class="cta-nota">R$ 19,90 · Vagas limitadas · Garantia de 7 dias</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-logo">Multiverso dos Criativos</div>
+    <p>
+      Ideias sem limites. Criação sem fronteiras.<br>
+      © 2026 [SUA EMPRESA] · CNPJ [00.000.000/0001-00]<br>
+      <a href="/termos">Termos de uso</a> · <a href="/privacidade">Política de privacidade</a> · <a href="mailto:SEU@EMAIL.com">Suporte</a>
+    </p>
+    <p class="footer-regras">
+      Este produto não garante resultados financeiros. Os resultados variam conforme dedicação e aplicação individual.
+      Este site não é afiliado ao Facebook, Instagram ou Canva.
+    </p>
+  </div>
+</footer>
+
+</div><!-- /.page -->
+
+<div class="sticky" id="sticky">
+  <div class="sticky-preco"><b>R$ 19,90</b><small>2 dias ao vivo</small></div>
+  <a class="cta" href="https://CHECKOUT.com.br/multiverso" data-cta>🚀 Garantir vaga</a>
+</div>
+
+<div class="notif" id="notif">
+  <div class="notif-dot"></div>
+  <div><b id="notif-nome"></b><small id="notif-txt"></small></div>
+</div>
+
+<script>
+/* ============================================================
+   CONFIGURAÇÃO — mexa só aqui
+   ============================================================ */
+const CONFIG = {
+  fimInscricoes: '2026-09-19T19:00:00-03:00',
+  vagasPreenchidas: 78,
+
+  /* Notificações de compra: mantenha FALSE.
+     Só ative alimentando com vendas REAIS (webhook do checkout).
+     Notificação inventada é propaganda enganosa (CDC art. 37). */
+  notificacoesAtivas: false,
+  compras: []
+};
+
+const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ============================================================
+   CURSOR FOGUETE + RASTRO DE FUMAÇA COLORIDA
+   ============================================================ */
+(function(){
+  const temMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if(!temMouse || semMovimento) return;
+
+  document.body.classList.add('foguete-on');
+
+  const foguete = document.getElementById('foguete');
+  const canvas  = document.getElementById('fumaca');
+  const ctx     = canvas.getContext('2d');
+
+  let dpr = Math.min(window.devicePixelRatio || 1, 2);
+  function medir(){
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width  = innerWidth  * dpr;
+    canvas.height = innerHeight * dpr;
+    canvas.style.width  = innerWidth  + 'px';
+    canvas.style.height = innerHeight + 'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  medir();
+  addEventListener('resize', medir);
+
+  /* paleta da fumaça: roxo, azul neon, rosa, dourado */
+  const CORES = [
+    [168, 85,247],
+    [ 34,211,255],
+    [255, 46,209],
+    [242,193, 78]
+  ];
+
+  const particulas = [];
+  let alvoX = innerWidth/2, alvoY = innerHeight/2;   // posição do mouse
+  let posX  = alvoX,        posY  = alvoY;           // posição suavizada do personagem
+  let lado = 1, ladoAlvo = 1;   // 1 = olhando para a direita, -1 = para a esquerda
+  let inclina = 0;              // inclinação do foguete
+
+  addEventListener('mousemove', e => {
+    alvoX = e.clientX; alvoY = e.clientY;
+
+    /* fumaça sai atrás do foguete, do lado oposto ao que ele aponta */
+    const cor = CORES[(Math.random()*CORES.length)|0];
+    for(let i=0;i<2;i++){
+      particulas.push({
+        x: e.clientX - lado*16 + (Math.random()-.5)*8,
+        y: e.clientY + 6 + (Math.random()-.5)*8,
+        vx: -lado*.5 + (Math.random()-.5)*.7,
+        vy: (Math.random()-.5)*.8 + .3,
+        r: 5 + Math.random()*9,
+        vida: 1,
+        decai: .012 + Math.random()*.012,
+        cor
+      });
+    }
+    if(particulas.length > 420) particulas.splice(0, particulas.length - 420);
+  });
+
+  /* O personagem NUNCA some: nem ao sair da janela, nem parado. */
+
+  function loop(){
+    ctx.clearRect(0,0,innerWidth,innerHeight);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for(let i = particulas.length - 1; i >= 0; i--){
+      const p = particulas[i];
+      p.x += p.vx; p.y += p.vy;
+      p.vx *= .97; p.vy *= .97;
+      p.r += .55;                 // a fumaça se expande
+      p.vida -= p.decai;
+      if(p.vida <= 0){ particulas.splice(i,1); continue; }
+
+      const [r,g,b] = p.cor;
+      const grad = ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);
+      grad.addColorStop(0,   'rgba('+r+','+g+','+b+','+ (p.vida*.34) +')');
+      grad.addColorStop(.45, 'rgba('+r+','+g+','+b+','+ (p.vida*.13) +')');
+      grad.addColorStop(1,   'rgba('+r+','+g+','+b+',0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fill();
+    }
+    ctx.globalCompositeOperation = 'source-over';
+
+    /* o personagem segue o mouse com leve atraso */
+    const dx = alvoX - posX, dy = alvoY - posY;
+    posX += dx * .22; posY += dy * .22;
+
+    /* vira para o lado do movimento em vez de cambalhotar:
+       assim o alienígena nunca fica de cabeça para baixo */
+    if(Math.abs(dx) > 1.4) ladoAlvo = dx > 0 ? 1 : -1;
+    lado += (ladoAlvo - lado) * .16;   // a virada passa pelo zero e dá um efeito de giro
+
+    /* inclina o foguete conforme sobe ou desce, no máximo 24° */
+    const inclinaAlvo = Math.max(-24, Math.min(24, dy * 1.3)) * ladoAlvo;
+    inclina += (inclinaAlvo - inclina) * .12;
+
+    foguete.style.transform =
+      'translate3d(' + (posX-32) + 'px,' + (posY-31) + 'px,0)' +
+      ' rotate(' + inclina + 'deg)' +
+      ' scaleX(' + (Math.abs(lado) < .06 ? (lado < 0 ? -.06 : .06) : lado) + ')';
+
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+
+/* ============================================================
+   COUNTDOWN
+   ============================================================ */
+(function(){
+  const alvo = new Date(CONFIG.fimInscricoes).getTime();
+  const el = {
+    d: document.querySelector('[data-d]'), h: document.querySelector('[data-h]'),
+    m: document.querySelector('[data-m]'), s: document.querySelector('[data-s]')
+  };
+  const z = n => String(Math.max(0,n)).padStart(2,'0');
+  function tick(){
+    const dif = alvo - Date.now();
+    if(dif <= 0){ el.d.textContent=el.h.textContent=el.m.textContent=el.s.textContent='00'; return; }
+    el.d.textContent = z(Math.floor(dif/864e5));
+    el.h.textContent = z(Math.floor(dif/36e5)%24);
+    el.m.textContent = z(Math.floor(dif/6e4)%60);
+    el.s.textContent = z(Math.floor(dif/1e3)%60);
+  }
+  tick(); setInterval(tick,1000);
+})();
+
+/* ============================================================
+   BARRA DE VAGAS
+   ============================================================ */
+(function(){
+  const p = Math.min(100, CONFIG.vagasPreenchidas);
+  document.getElementById('vagas-barra').style.width = p + '%';
+  document.getElementById('vagas-txt').textContent = p + '% preenchidas';
+})();
+
+/* ============================================================
+   STICKY CTA
+   ============================================================ */
+(function(){
+  const sticky = document.getElementById('sticky');
+  const hero = document.querySelector('.hero');
+  new IntersectionObserver(([e]) => sticky.classList.toggle('on', !e.isIntersecting), {threshold:0}).observe(hero);
+})();
+
+/* ============================================================
+   REVEAL AO ROLAR
+   ============================================================ */
+(function(){
+  const io = new IntersectionObserver((es,o)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); o.unobserve(e.target); } });
+  },{threshold:.1,rootMargin:'0px 0px -50px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+})();
+
+/* ============================================================
+   NOTIFICAÇÕES (desligadas por padrão)
+   ============================================================ */
+(function(){
+  if(!CONFIG.notificacoesAtivas || !CONFIG.compras.length) return;
+  const box = document.getElementById('notif');
+  let i = 0;
+  setInterval(()=>{
+    const c = CONFIG.compras[i % CONFIG.compras.length]; i++;
+    document.getElementById('notif-nome').textContent = c.nome + ' garantiu a vaga';
+    document.getElementById('notif-txt').textContent  = c.cidade + ' · há ' + c.ha;
+    box.classList.add('on');
+    setTimeout(()=>box.classList.remove('on'), 5000);
+  }, 14000);
+})();
+
+/* ============================================================
+   TRACKING (Meta Pixel / GA4)
+   ============================================================ */
+document.querySelectorAll('[data-cta]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    if(window.fbq)  fbq('track','InitiateCheckout',{value:19.90,currency:'BRL'});
+    if(window.gtag) gtag('event','begin_checkout',{value:19.90,currency:'BRL'});
+  });
+});
+</script>
+</body>
+</html>
