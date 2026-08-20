@@ -1,0 +1,9 @@
+{
+  "fishCount": { "type": "slider",   "text": "Peixes",            "value": 14,   "min": 1,   "max": 30, "step": 1 },
+  "speed":     { "type": "slider",   "text": "Velocidade",        "value": 1,    "min": 0.2, "max": 2,  "step": 0.1 },
+  "light":     { "type": "slider",   "text": "Luz",               "value": 1,    "min": 0,   "max": 2,  "step": 0.1 },
+  "theme":     { "type": "dropdown", "text": "Cenário",           "value": 0,    "items": ["Recife", "Águas fundas", "Lagoa"] },
+  "bubbles":   { "type": "checkbox", "text": "Bolhas",            "value": true },
+  "plants":    { "type": "checkbox", "text": "Plantas",           "value": true },
+  "glass":     { "type": "checkbox", "text": "Reflexo do vidro",  "value": true }
+}
