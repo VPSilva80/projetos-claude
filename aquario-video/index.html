@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aquário</title>
+<style>
+  html, body { margin:0; padding:0; width:100%; height:100%; overflow:hidden; background:#0b3f52; }
+
+  /* recorta a moldura do celular e as barras de botões do app */
+  #palco { position:fixed; inset:0; overflow:hidden; }
+  #palco video {
+    position:absolute; left:0; top:0;
+    transform-origin:0 0;
+    will-change:opacity, transform;
+  }
+  #b { opacity:0; }
+
+  #barra {
+    position:fixed; right:18px; bottom:18px; z-index:5;
+    display:flex; gap:8px; opacity:0; transition:opacity .35s;
+  }
+  #barra.visivel { opacity:1; }
+  #barra button {
+    display:flex; align-items:center; gap:7px;
+    padding:9px 13px; border-radius:999px; cursor:pointer;
+    background:rgba(4,26,38,.72); color:#d6eef8;
+    border:1px solid rgba(140,210,235,.28); backdrop-filter:blur(9px);
+    font:12px/1 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  #barra button:hover { background:rgba(10,44,62,.88); border-color:rgba(160,225,250,.5); }
+  #barra button:focus-visible { outline:2px solid #6fd0ee; outline-offset:2px; }
+  #barra svg { width:15px; height:15px; fill:currentColor; }
+
+  #erro {
+    position:fixed; inset:0; z-index:9; display:none; place-items:center;
+    text-align:center; padding:32px; background:#04202e; color:#bcdfee;
+    font:14px/1.7 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  #erro.aparece { display:grid; }
+  #erro b { color:#7fd3ee; }
+</style>
+</head>
+<body>
+  <div id="palco">
+    <video id="a" playsinline muted preload="auto"></video>
+    <video id="b" playsinline muted preload="auto"></video>
+  </div>
+
+  <div id="barra">
+    <button id="btSom" type="button" aria-pressed="false">
+      <svg id="icSom" viewBox="0 0 24 24" aria-hidden="true"></svg>
+      <span id="txtSom">Som desligado</span>
+    </button>
+  </div>
+
+  <div id="erro">
+    <p>Este navegador não conseguiu abrir o vídeo.<br>
+       Ele usa <b>VP9</b> com áudio AAC — abra no Chrome, Edge ou Safari.</p>
+  </div>
+
+  <script src="player.js"></script>
+</body>
+</html>
