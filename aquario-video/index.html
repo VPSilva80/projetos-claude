@@ -9,12 +9,18 @@
 
   /* recorta a moldura do celular e as barras de botões do app */
   #palco { position:fixed; inset:0; overflow:hidden; }
+  #tela { position:absolute; left:0; top:0; display:block; }
+  /* os vídeos servem de fonte para a textura: ficam fora de vista,
+     mas presentes no layout para o navegador não parar de decodificar */
   #palco video {
-    position:absolute; left:0; top:0;
+    position:absolute; left:0; top:0; width:2px; height:2px;
+    opacity:.001; pointer-events:none;
     transform-origin:0 0;
-    will-change:opacity, transform;
   }
-  #b { opacity:0; }
+  /* caminho alternativo, sem WebGL2 */
+  #palco video.visivel {
+    width:auto; height:auto; opacity:1; will-change:opacity, transform;
+  }
 
   #barra {
     position:fixed; right:18px; bottom:18px; z-index:5;
@@ -43,12 +49,13 @@
 </head>
 <body>
   <div id="palco">
+    <canvas id="tela"></canvas>
     <video id="a" playsinline muted preload="auto"></video>
     <video id="b" playsinline muted preload="auto"></video>
   </div>
 
   <div id="barra">
-    <button id="btSom" type="button" aria-pressed="false">
+    <button id="btSom" type="button" aria-pressed="false" title="M liga/desliga som · + e - ajustam a nitidez · 0 mostra sem tratamento">
       <svg id="icSom" viewBox="0 0 24 24" aria-hidden="true"></svg>
       <span id="txtSom">Som desligado</span>
     </button>
